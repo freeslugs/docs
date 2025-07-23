@@ -1,0 +1,589 @@
+---
+title: "Security Overview"
+description: "How Fellow protects your money and data with enterprise-grade security"
+---
+
+## Security-First Architecture
+
+Fellow is built with security as the foundation. As a global financial router handling billions in transactions, we employ multiple layers of protection to safeguard your funds and personal information.
+
+<Note>
+  **Trust & Transparency**: Fellow's security model is designed around zero-trust principles, end-to-end encryption, and regulatory compliance across all supported jurisdictions.
+</Note>
+
+## Multi-Layer Security Framework
+
+<Steps>
+  <Step title="Infrastructure Security">
+    **Enterprise-Grade Foundation:**
+    - AWS SOC 2 Type II compliant infrastructure
+    - Multi-region redundancy and failover
+    - DDoS protection and network isolation
+    - 24/7 security monitoring and incident response
+  </Step>
+  
+  <Step title="Application Security">
+    **Secure-by-Design Development:**
+    - Zero-trust architecture principles
+    - Regular security audits and penetration testing
+    - Secure coding practices and code reviews
+    - Automated vulnerability scanning
+  </Step>
+  
+  <Step title="Data Protection">
+    **Privacy-First Data Handling:**
+    - End-to-end encryption for all sensitive data
+    - AES-256 encryption at rest and in transit
+    - Minimal data collection and retention
+    - GDPR and CCPA compliance
+  </Step>
+  
+  <Step title="Financial Security">
+    **Money Movement Protection:**
+    - Multi-signature transaction approval
+    - Real-time fraud detection and prevention
+    - Segregated customer funds
+    - Insurance coverage for eligible assets
+  </Step>
+</Steps>
+
+## Core Security Features
+
+### Account Protection
+
+<CardGroup cols={2}>
+  <Card title="Multi-Factor Authentication" icon="shield-check">
+    **Layered Access Control:**
+    - SMS and authenticator app 2FA
+    - Biometric authentication (Face ID, Touch ID)
+    - Hardware key support (YubiKey, etc.)
+    - Device fingerprinting and recognition
+  </Card>
+  <Card title="Advanced Fraud Detection" icon="eye">
+    **AI-Powered Monitoring:**
+    - Real-time transaction analysis
+    - Behavioral pattern recognition  
+    - Geolocation and device verification
+    - Automatic suspicious activity blocking
+  </Card>
+</CardGroup>
+
+### Transaction Security
+
+<AccordionGroup>
+  <Accordion icon="lock" title="Encryption Standards">
+    **Military-Grade Protection:**
+    - AES-256 encryption for data at rest
+    - TLS 1.3 for data in transit
+    - End-to-end encryption for routing paths
+    - Hardware security modules (HSMs)
+    
+    **Key Management:**
+    - Secure key generation and rotation
+    - Multi-party computation (MPC)
+    - Hardware-backed key storage
+    - Zero-knowledge proof systems
+  </Accordion>
+  
+  <Accordion icon="signature" title="Transaction Signing">
+    **Cryptographic Verification:**
+    - Multi-signature transaction approval
+    - Hierarchical deterministic (HD) wallets
+    - Hardware wallet integration
+    - Threshold signature schemes
+    
+    **Authorization Flows:**
+    - Biometric confirmation for large amounts
+    - Time-delayed transfers for security
+    - Whitelist addresses for enhanced protection
+    - Emergency transaction freezing
+  </Accordion>
+  
+  <Accordion icon="route" title="Secure Routing">
+    **Protected Money Movement:**
+    - Encrypted routing path information
+    - Private transaction metadata
+    - Secure multi-hop transfers
+    - Anonymous payment routing options
+    
+    **Settlement Protection:**
+    - Atomic swap mechanisms
+    - Escrow services for complex transfers
+    - Automatic rollback on failures
+    - Real-time settlement verification
+  </Accordion>
+</AccordionGroup>
+
+## Regulatory Compliance
+
+### Financial Regulations
+
+<Tabs>
+  <Tab title="United States">
+    **US Financial Compliance:**
+    - Money Services Business (MSB) registration
+    - Bank Secrecy Act (BSA) compliance
+    - Anti-Money Laundering (AML) procedures
+    - Know Your Customer (KYC) requirements
+    - OFAC sanctions screening
+    - State-by-state money transmitter licenses
+    
+    **Regulatory Partners:**
+    - FDIC-insured banking partnerships
+    - Regulated cryptocurrency exchanges
+    - Licensed payment processors
+    - Compliant custody solutions
+  </Tab>
+  
+  <Tab title="International">
+    **Global Compliance:**
+    - European PSD2 compliance
+    - UK FCA authorization
+    - Canadian FINTRAC registration
+    - Japanese FSA compliance
+    - Australian AUSTRAC reporting
+    
+    **International Standards:**
+    - FATF recommendations
+    - Basel III capital requirements
+    - ISO 27001 certification
+    - SOC 2 Type II attestation
+  </Tab>
+  
+  <Tab title="Data Protection">
+    **Privacy Regulations:**
+    - General Data Protection Regulation (GDPR)
+    - California Consumer Privacy Act (CCPA)
+    - Personal Information Protection Act (PIPA)
+    - Right to be forgotten implementation
+    - Data portability and access rights
+    
+    **Privacy Features:**
+    - Minimal data collection
+    - Purpose limitation principles
+    - Consent management systems
+    - Data retention policies
+  </Tab>
+</Tabs>
+
+### AML/KYC Procedures
+
+<Warning>
+  **Compliance Requirement**: All Fellow users must complete identity verification to access routing services. This helps us prevent money laundering and comply with financial regulations.
+</Warning>
+
+<Steps>
+  <Step title="Identity Verification">
+    **KYC Process:**
+    - Government-issued ID verification
+    - Address confirmation with utility bills
+    - Biometric identity matching
+    - PEP and sanctions list screening
+  </Step>
+  
+  <Step title="Transaction Monitoring">
+    **AML Surveillance:**
+    - Real-time transaction screening
+    - Suspicious activity reporting (SARs)
+    - Pattern recognition algorithms
+    - Regulatory reporting automation
+  </Step>
+  
+  <Step title="Ongoing Due Diligence">
+    **Continuous Monitoring:**
+    - Periodic customer review
+    - Source of funds verification
+    - Enhanced due diligence for high-risk customers
+    - Regular compliance audits
+  </Step>
+</Steps>
+
+## Technical Security Measures
+
+### Infrastructure Protection
+
+<AccordionGroup>
+  <Accordion icon="server" title="Secure Infrastructure">
+    **Cloud Security:**
+    - AWS VPC with private subnets
+    - Network segmentation and isolation
+    - Web Application Firewall (WAF)
+    - DDoS protection and mitigation
+    
+    **Access Control:**
+    - Role-based access control (RBAC)
+    - Principle of least privilege
+    - Multi-factor authentication for staff
+    - Regular access reviews and audits
+  </Accordion>
+  
+  <Accordion icon="database" title="Data Security">
+    **Database Protection:**
+    - Encrypted databases with field-level encryption
+    - Database activity monitoring (DAM)
+    - Regular security patches and updates
+    - Automated backup and recovery
+    
+    **Data Classification:**
+    - Sensitive data identification and tagging
+    - Data loss prevention (DLP) systems
+    - Secure data disposal procedures
+    - Regular data inventory audits
+  </Accordion>
+  
+  <Accordion icon="code" title="Application Security">
+    **Secure Development:**
+    - Security Development Lifecycle (SDL)
+    - Static and dynamic code analysis
+    - Dependency vulnerability scanning
+    - Regular security code reviews
+    
+    **Runtime Protection:**
+    - Web Application Firewall (WAF)
+    - Runtime Application Self-Protection (RASP)
+    - API security and rate limiting
+    - Container security scanning
+  </Accordion>
+</AccordionGroup>
+
+### Cryptographic Security
+
+<Tabs>
+  <Tab title="Encryption">
+    **Data Encryption:**
+    - AES-256 for data at rest
+    - ChaCha20-Poly1305 for high-performance encryption
+    - RSA-4096 for key exchange
+    - ECDSA for digital signatures
+    
+    **Key Management:**
+    - Hardware Security Modules (HSMs)
+    - Key rotation and lifecycle management
+    - Secure key derivation functions
+    - Multi-party computation (MPC)
+  </Tab>
+  
+  <Tab title="Blockchain Security">
+    **Crypto Integration:**
+    - Multi-signature wallet architecture
+    - Hardware wallet integration
+    - Secure seed phrase generation
+    - Threshold signature schemes
+    
+    **Smart Contract Security:**
+    - Formal verification processes
+    - Multiple security audits
+    - Bug bounty programs
+    - Upgradeable contract patterns
+  </Tab>
+</Tabs>
+
+## Fund Protection
+
+### Segregation of Assets
+
+<Note>
+  **Customer Fund Protection**: Fellow maintains strict segregation of customer funds from operational funds, with additional insurance coverage for eligible assets.
+</Note>
+
+<CardGroup cols={2}>
+  <Card title="Traditional Assets" icon="bank">
+    **FDIC Protection:**
+    - Customer funds held in FDIC-insured accounts
+    - Segregated from Fellow operational funds
+    - Up to $250,000 FDIC coverage per bank
+    - Multiple banking partners for coverage optimization
+  </Card>
+  <Card title="Cryptocurrency" icon="coins">
+    **Crypto Custody:**
+    - Cold storage for 95% of crypto assets
+    - Multi-signature wallets for hot funds
+    - Insurance coverage through Lloyd's of London
+    - Regular proof-of-reserves audits
+  </Card>
+</CardGroup>
+
+### Insurance Coverage
+
+<AccordionGroup>
+  <Accordion icon="shield" title="Traditional Insurance">
+    **FDIC/SIPC Coverage:**
+    - Bank deposits: FDIC insured up to $250,000
+    - Investment accounts: SIPC protected up to $500,000
+    - Excess SIPC coverage through Lloyd's
+    - Professional liability insurance
+  </Accordion>
+  
+  <Accordion icon="building-shield" title="Cryptocurrency Insurance">
+    **Digital Asset Protection:**
+    - Hot wallet coverage: $100M policy
+    - Cold storage coverage: $500M policy  
+    - Employee theft and insider trading coverage
+    - Smart contract vulnerability coverage
+  </Accordion>
+  
+  <Accordion icon="umbrella" title="Operational Insurance">
+    **Business Protection:**
+    - Errors and omissions (E&O) insurance
+    - Directors and officers (D&O) coverage
+    - Cyber liability insurance
+    - Business interruption coverage
+  </Accordion>
+</AccordionGroup>
+
+## Privacy Protection
+
+### Data Minimization
+
+<Steps>
+  <Step title="Collection Limitation">
+    **Minimal Data Gathering:**
+    - Only collect data necessary for service operation
+    - Clear purpose specification for all data use
+    - Regular data inventory and classification
+    - Automated data retention policies
+  </Step>
+  
+  <Step title="Processing Restriction">
+    **Purpose Limitation:**
+    - Use data only for specified purposes
+    - No secondary use without explicit consent
+    - Regular consent management and updates
+    - Easy withdrawal of consent mechanisms
+  </Step>
+  
+  <Step title="Storage Minimization">
+    **Data Retention:**
+    - Automatic deletion of expired data
+    - Secure data disposal procedures
+    - Right to be forgotten implementation
+    - Regular data purging audits
+  </Step>
+</Steps>
+
+### Privacy by Design
+
+<Tabs>
+  <Tab title="Technical Measures">
+    **Privacy Engineering:**
+    - Zero-knowledge proof systems
+    - Differential privacy techniques
+    - Homomorphic encryption research
+    - Anonymous routing protocols
+    
+    **Data Protection:**
+    - End-to-end encryption by default
+    - Local data processing when possible
+    - Minimal server-side data storage
+    - Privacy-preserving analytics
+  </Tab>
+  
+  <Tab title="Organizational Measures">
+    **Privacy Governance:**
+    - Privacy impact assessments (PIAs)
+    - Data protection officer (DPO) oversight
+    - Regular privacy training for staff
+    - Privacy by design in product development
+    
+    **User Rights:**
+    - Transparent privacy notices
+    - Easy access to personal data
+    - Simple data correction mechanisms
+    - One-click data export
+  </Tab>
+</Tabs>
+
+## Incident Response
+
+### Security Incident Management
+
+<AccordionGroup>
+  <Accordion icon="bell" title="Detection & Alerting">
+    **24/7 Monitoring:**
+    - Security Information and Event Management (SIEM)
+    - Intrusion detection and prevention systems
+    - Automated threat detection algorithms
+    - Real-time security dashboards
+  </Accordion>
+  
+  <Accordion icon="users" title="Response Team">
+    **Incident Response Team:**
+    - 24/7 security operations center (SOC)
+    - Incident response playbooks
+    - Communication protocols
+    - Escalation procedures
+  </Accordion>
+  
+  <Accordion icon="shield-exclamation" title="Containment & Recovery">
+    **Incident Management:**
+    - Immediate threat containment
+    - Evidence preservation procedures
+    - System recovery and restoration
+    - Post-incident analysis and improvement
+  </Accordion>
+</AccordionGroup>
+
+### Breach Notification
+
+<Steps>
+  <Step title="Detection">
+    **Immediate Assessment:**
+    - Automated breach detection systems
+    - Security team notification within 15 minutes
+    - Initial impact assessment
+    - Containment measures activated
+  </Step>
+  
+  <Step title="Investigation">
+    **Forensic Analysis:**
+    - Digital forensics team engagement
+    - Root cause analysis
+    - Scope and impact determination
+    - Evidence collection and preservation
+  </Step>
+  
+  <Step title="Notification">
+    **Regulatory & User Communication:**
+    - Regulatory notification within 72 hours
+    - User notification within required timeframes
+    - Public disclosure if legally required
+    - Regular updates during investigation
+  </Step>
+  
+  <Step title="Remediation">
+    **Recovery & Improvement:**
+    - System restoration and hardening
+    - Process improvements implementation
+    - Security control enhancements
+    - Lessons learned documentation
+  </Step>
+</Steps>
+
+## Security Audits & Certifications
+
+### Regular Auditing
+
+<CardGroup cols={2}>
+  <Card title="Internal Audits" icon="magnifying-glass">
+    **Continuous Assessment:**
+    - Monthly security assessments
+    - Quarterly compliance reviews
+    - Annual risk assessments
+    - Ongoing vulnerability scanning
+  </Card>
+  <Card title="External Audits" icon="certificate">
+    **Third-Party Validation:**
+    - Annual SOC 2 Type II audits
+    - ISO 27001 certification maintenance
+    - PCI DSS compliance assessment
+    - Regular penetration testing
+  </Card>
+</CardGroup>
+
+### Security Certifications
+
+<Tabs>
+  <Tab title="Current Certifications">
+    **Achieved Standards:**
+    - SOC 2 Type II (Security, Availability, Confidentiality)
+    - ISO 27001 Information Security Management
+    - PCI DSS Level 1 Service Provider
+    - AICPA Trust Services Criteria
+    
+    **Compliance Frameworks:**
+    - NIST Cybersecurity Framework
+    - OWASP Top 10 mitigation
+    - CIS Controls implementation
+    - COBIT governance framework
+  </Tab>
+  
+  <Tab title="Ongoing Assessments">
+    **Regular Evaluations:**
+    - Annual SOC 2 Type II renewals
+    - Quarterly vulnerability assessments
+    - Monthly compliance audits
+    - Continuous security monitoring
+    
+    **Bug Bounty Program:**
+    - Public vulnerability disclosure program
+    - Responsible disclosure policies
+    - Security researcher rewards
+    - Coordinated vulnerability disclosure
+  </Tab>
+</Tabs>
+
+## User Security Best Practices
+
+### Account Security
+
+<Warning>
+  **Your Role**: While Fellow provides enterprise-grade security, your account security also depends on following best practices for password management and device security.
+</Warning>
+
+<AccordionGroup>
+  <Accordion icon="key" title="Strong Authentication">
+    **Password Security:**
+    - Use unique, complex passwords
+    - Enable two-factor authentication
+    - Consider hardware security keys
+    - Regular password updates
+    
+    **Device Security:**
+    - Keep devices updated with latest security patches
+    - Use device lock screens and encryption
+    - Avoid public Wi-Fi for sensitive operations
+    - Install apps only from official stores
+  </Accordion>
+  
+  <Accordion icon="eye" title="Monitoring Your Account">
+    **Regular Reviews:**
+    - Monitor account activity regularly
+    - Review transaction history monthly
+    - Set up account alerts and notifications
+    - Report suspicious activity immediately
+    
+    **Access Management:**
+    - Log out of shared or public devices
+    - Review and revoke unnecessary app permissions
+    - Keep contact information updated
+    - Use official Fellow apps and website only
+  </Accordion>
+</AccordionGroup>
+
+## Security Contact
+
+### Reporting Security Issues
+
+<CardGroup cols={2}>
+  <Card title="Security Team" icon="shield">
+    **Direct Contact:**
+    - Email: security@fellow.app
+    - PGP Key: Available on our website
+    - Response time: Within 4 hours
+    - 24/7 emergency hotline available
+  </Card>
+  <Card title="Bug Bounty" icon="bug">
+    **Responsible Disclosure:**
+    - Bug bounty program: security.fellow.app
+    - Coordinated disclosure process
+    - Rewards for valid security findings
+    - Hall of fame for security researchers
+  </Card>
+</CardGroup>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Download Fellow App" icon="download" href="https://app.fellow.app">
+    Get started with Fellow's secure consumer app
+  </Card>
+  <Card title="API Documentation" icon="code" href="/api-reference/introduction">
+    Learn about integrating Fellow's security features
+  </Card>
+  <Card title="How It Works" icon="compass" href="/features/overview">
+    Understand Fellow's router architecture and security
+  </Card>
+  <Card title="Get Support" icon="life-ring" href="/resources/support">
+    Contact our security team with questions
+  </Card>
+</CardGroup>

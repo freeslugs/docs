@@ -1,0 +1,548 @@
+---
+title: "P2P Payments"
+description: "Send money to anyone with a phone number through Fellow's routing layer"
+---
+
+## Overview
+
+Fellow's P2P payment system revolutionizes how you send money to friends, family, and anyone else. Using just phone numbers, you can route money instantly between any financial platforms with true settlement in under 5 seconds.
+
+<Note>
+  **Universal Access**: Recipients don't need a Fellow account. They can claim payments instantly through any supported financial platform.
+</Note>
+
+## How P2P Routing Works
+
+<Steps>
+  <Step title="Enter Phone Number">
+    Simply enter the recipient's phone number - no need for complex wallet addresses, account numbers, or usernames.
+  </Step>
+  
+  <Step title="Select Source Platform">
+    Choose where to send money from:
+    - Your bank account
+    - Apple Pay or Google Pay
+    - Crypto wallet (Coinbase, Phantom, etc.)
+    - Investment account
+    - Any connected platform
+  </Step>
+  
+  <Step title="Router Optimization">
+    Fellow's router automatically determines the optimal path based on:
+    - Recipient's preferred receiving method
+    - Fastest settlement time
+    - Lowest fees
+    - Your routing preferences
+  </Step>
+  
+  <Step title="Instant Settlement">
+    Money routes through Fellow's infrastructure and settles on blockchain with true finality in under 5 seconds.
+  </Step>
+</Steps>
+
+## Key Features
+
+### Phone Number Universal ID
+
+<CardGroup cols={2}>
+  <Card title="No App Required" icon="phone">
+    Recipients don't need Fellow installed. They can claim payments through SMS links.
+  </Card>
+  <Card title="Cross-Platform" icon="arrows-left-right">
+    Send from Apple Pay to someone's Coinbase, or from crypto wallet to their bank account.
+  </Card>
+</CardGroup>
+
+<Tip>
+  **Smart Recipient Detection**: Fellow automatically detects the recipient's available financial platforms and routes to their preferred receiving method.
+</Tip>
+
+### Intelligent Routing
+
+<AccordionGroup>
+  <Accordion icon="brain" title="Recipient Preference Learning">
+    **Adaptive Routing:**
+    - Learns recipient's preferred platforms over time
+    - Remembers past successful routing paths  
+    - Adapts to recipient's usage patterns
+    - Suggests optimal receiving methods
+  </Accordion>
+  
+  <Accordion icon="zap" title="Real-Time Optimization">
+    **Dynamic Path Selection:**
+    - Considers current network conditions
+    - Adjusts for liquidity availability
+    - Accounts for recipient's online status
+    - Optimizes based on amount size
+  </Accordion>
+  
+  <Accordion icon="shield" title="Security & Privacy">
+    **Protected Transfers:**
+    - End-to-end encryption
+    - Fraud detection algorithms
+    - Anti-money laundering compliance
+    - Privacy-preserving routing
+  </Accordion>
+</AccordionGroup>
+
+## Supported Platforms
+
+### Sending From
+
+<Tabs>
+  <Tab title="Traditional Banking">
+    **Bank Accounts:**
+    - Checking and savings accounts
+    - Credit union accounts
+    - Money market accounts
+    
+    **Digital Wallets:**
+    - Apple Pay, Google Pay, Samsung Pay
+    - PayPal, Venmo, Cash App
+    - Zelle (coming soon)
+    
+    **Cards:**
+    - Debit cards (instant)
+    - Credit cards (for rewards)
+  </Tab>
+  
+  <Tab title="Cryptocurrency">
+    **Major Exchanges:**
+    - Coinbase, Binance, Kraken
+    - Gemini, Crypto.com, KuCoin
+    
+    **Self-Custody Wallets:**
+    - MetaMask, Phantom, Trust Wallet
+    - Rainbow, Argent, Gnosis Safe
+    - Hardware wallets (Ledger, Trezor)
+    
+    **Supported Assets:**
+    - Bitcoin, Ethereum, Solana
+    - USDC, USDT, DAI (stablecoins)  
+    - Major altcoins and tokens
+  </Tab>
+  
+  <Tab title="Investment Platforms">
+    **Brokerage Accounts:**
+    - Robinhood, E*TRADE, Fidelity
+    - Charles Schwab, TD Ameritrade
+    - Interactive Brokers, Webull
+    
+    **Crypto Investments:**
+    - DeFi yield farming positions
+    - Staked tokens and rewards
+    - NFT collections (coming soon)
+  </Tab>
+</Tabs>
+
+### Receiving Methods
+
+Recipients can receive money through any of their connected platforms, or claim it through:
+
+<CardGroup cols={3}>
+  <Card title="Instant Claim" icon="bolt">
+    **SMS Link:**
+    - Click link in SMS
+    - Choose receiving platform  
+    - Funds arrive instantly
+  </Card>
+  <Card title="Auto-Route" icon="route">
+    **Smart Delivery:**
+    - Routes to preferred platform
+    - Based on past behavior
+    - Optimizes for recipient
+  </Card>
+  <Card title="Multi-Option" icon="list">
+    **Flexible Choice:**
+    - Multiple receiving options
+    - Compare settlement times
+    - Choose based on needs
+  </Card>
+</CardGroup>
+
+## P2P Payment Examples
+
+### Scenario 1: Split Restaurant Bill
+
+<CodeGroup>
+```javascript Quick Split
+// Split $120 restaurant bill among 4 friends
+const splitPayment = await router.createSplit({
+  amount: 12000, // $120.00 in cents
+  recipients: [
+    { phone: '+1234567890', share: 3000 }, // $30
+    { phone: '+1234567891', share: 3000 }, // $30  
+    { phone: '+1234567892', share: 3000 }, // $30
+    { phone: '+1234567893', share: 3000 }  // $30
+  ],
+  from: 'apple_pay',
+  memo: 'Dinner at Mario\'s - thanks everyone!'
+});
+```
+
+```python Group Request
+# Request money from multiple people
+split_request = client.request_split(
+    total_amount=12000,
+    from_contacts=[
+        {'phone': '+1234567890', 'amount': 3000},
+        {'phone': '+1234567891', 'amount': 3000},
+        {'phone': '+1234567892', 'amount': 3000},
+        {'phone': '+1234567893', 'amount': 3000}
+    ],
+    to_account='checking_account',
+    due_date='2024-01-15',
+    memo='Mario\'s Restaurant - Split Bill'
+)
+```
+</CodeGroup>
+
+**What Happens:**
+1. Each friend gets SMS with payment request
+2. They can pay from any platform (Venmo, bank, crypto, etc.)
+3. All payments route through Fellow and settle instantly
+4. You receive consolidated payment in your chosen account
+
+### Scenario 2: Cross-Platform Gift
+
+```javascript
+// Send birthday gift from crypto gains to traditional user
+const gift = await router.send({
+  from: 'coinbase_wallet',
+  amount: 5000, // $50.00
+  recipient: '+1234567890',
+  asset: 'USDC',
+  destinationHint: 'bank_account', // Suggest bank deposit
+  memo: 'Happy Birthday! 🎉',
+  priority: 'speed'
+});
+
+console.log(`Gift sent! Settlement: ${gift.estimatedSettlement}`);
+// Output: Gift sent! Settlement: 4.2 seconds
+```
+
+**Routing Intelligence:**
+- Detects recipient doesn't have crypto wallets
+- Automatically converts USDC to USD
+- Routes to recipient's preferred bank account
+- Settles in under 5 seconds with SMS notification
+
+### Scenario 3: International Remittance
+
+```python
+# Send money to family overseas
+international_transfer = client.send(
+    from_platform='bank_account',
+    amount=50000,  # $500.00
+    recipient='+52123456789',  # Mexico phone number
+    destination_currency='MXN',
+    routing_preference='cost_optimized',
+    memo='Monthly family support'
+)
+
+print(f"Exchange rate: {international_transfer.exchange_rate}")
+print(f"Recipient receives: {international_transfer.destination_amount} MXN")
+print(f"Total cost: ${international_transfer.total_fee_usd}")
+```
+
+**Global Routing:**
+- Fellow's router finds optimal USD → MXN path
+- Uses stablecoin rails for instant cross-border settlement
+- Recipient claims through local banking or crypto platforms
+- 90% cheaper than traditional remittance services
+
+## Payment Features
+
+### Smart Scheduling
+
+<AccordionGroup>
+  <Accordion icon="calendar" title="Recurring Payments">
+    **Automated P2P:**
+    - Set up recurring payments to family, friends
+    - Rent splits, subscription sharing
+    - Allowances and regular support
+    - Automatic routing optimization
+  </Accordion>
+  
+  <Accordion icon="clock" title="Scheduled Sends">
+    **Future Payments:**
+    - Schedule payments for specific dates
+    - Birthday and anniversary reminders
+    - Bill due date automation
+    - Time zone aware delivery
+  </Accordion>
+  
+  <Accordion icon="repeat" title="Payment Templates">
+    **Quick Actions:**
+    - Save frequent recipients and amounts
+    - One-tap payment to saved contacts
+    - Custom memo templates
+    - Preferred routing settings
+  </Accordion>
+</AccordionGroup>
+
+### Social Features
+
+<Tabs>
+  <Tab title="Group Payments">
+    **Collaborative Finance:**
+    - Group expenses and bill splitting
+    - Shared savings goals
+    - Event payment collection
+    - Real-time contribution tracking
+  </Tab>
+  
+  <Tab title="Payment Requests">
+    **Easy Collection:**
+    - Send payment requests via SMS
+    - Set due dates and amounts
+    - Automatic reminders
+    - Multiple payment options for payer
+  </Tab>
+  
+  <Tab title="Social Splitting">
+    **Smart Allocation:**
+    - Photo receipt scanning
+    - Automatic item detection
+    - Custom split ratios
+    - Tip and tax distribution
+  </Tab>
+</Tabs>
+
+## Security & Privacy
+
+### Transaction Security
+
+<Warning>
+  **Multi-Layer Protection**: All P2P payments are protected by enterprise-grade security measures.
+</Warning>
+
+<Steps>
+  <Step title="Identity Verification">
+    **Sender Authentication:**
+    - Biometric authentication (Face ID, Touch ID)
+    - Two-factor authentication for large amounts
+    - Device fingerprinting and fraud detection
+  </Step>
+  
+  <Step title="Encrypted Routing">
+    **Secure Transmission:**
+    - End-to-end encryption for all payment data
+    - Zero-knowledge routing protocols
+    - Private routing path obfuscation
+  </Step>
+  
+  <Step title="Recipient Protection">
+    **Safe Delivery:**
+    - SMS verification for first-time recipients
+    - Anti-fraud monitoring and blocking
+    - Reversible transactions within security window
+  </Step>
+</Steps>
+
+### Privacy Controls
+
+<CardGroup cols={2}>
+  <Card title="Transaction Privacy" icon="eye-slash">
+    **What's Hidden:**
+    - Routing path details
+    - Source platform information
+    - Transaction metadata
+    - Personal financial data
+  </Card>
+  <Card title="Recipient Privacy" icon="shield">
+    **What's Protected:**
+    - Phone number privacy
+    - Platform preferences
+    - Transaction history
+    - Financial account details
+  </Card>
+</CardGroup>
+
+## Fees & Limits
+
+### Transparent Pricing
+
+<Tip>
+  **No Hidden Fees**: Fellow charges a simple 1% fee with no markups, monthly fees, or surprise charges.
+</Tip>
+
+| Transaction Type | Fee | Settlement Time | Limits |
+|------------------|-----|-----------------|---------|
+| **Domestic P2P** | 1% | <5 seconds | $5,000/day |
+| **International** | 1% + FX spread | <10 seconds | $2,500/day |
+| **Crypto-to-Fiat** | 1% | <5 seconds | $10,000/day |
+| **Group Payments** | 1% per recipient | <5 seconds | 20 recipients max |
+
+### Daily Limits
+
+<AccordionGroup>
+  <Accordion icon="user" title="Individual Users">
+    **Standard Limits:**
+    - Send: $5,000 per day
+    - Receive: Unlimited
+    - Monthly: $50,000
+    - Can be increased with verification
+  </Accordion>
+  
+  <Accordion icon="users" title="Group Payments">
+    **Collective Limits:**
+    - Total group payment: $25,000
+    - Individual contribution: $5,000
+    - Maximum participants: 50
+    - Split calculation precision: $0.01
+  </Accordion>
+  
+  <Accordion icon="building" title="Business Users">
+    **Enhanced Limits:**
+    - Send: $25,000 per day
+    - Receive: Unlimited
+    - Monthly: $500,000
+    - Custom limits available
+  </Accordion>
+</AccordionGroup>
+
+## API Integration
+
+### P2P Payment API
+
+<CodeGroup>
+```javascript Send Payment
+import { FellowRouter } from '@fellow/router-sdk';
+
+const router = new FellowRouter({
+  apiKey: process.env.FELLOW_API_KEY
+});
+
+// Send P2P payment
+const payment = await router.sendP2P({
+  recipient: '+1234567890',
+  amount: 2500, // $25.00 in cents
+  from: 'apple_pay',
+  memo: 'Coffee this morning!',
+  priority: 'speed'
+});
+
+console.log('Payment ID:', payment.id);
+console.log('Status:', payment.status);
+console.log('Settlement ETA:', payment.settlementTime);
+```
+
+```python Request Payment  
+from fellow import RouterClient
+
+client = RouterClient(api_key=os.getenv('FELLOW_API_KEY'))
+
+# Request payment from someone
+request = client.request_payment(
+    from_phone='+1234567890',
+    amount=2500,
+    to_account='checking_account',
+    memo='Lunch money owed',
+    due_date='2024-01-20'
+)
+
+print(f"Request ID: {request.id}")
+print(f"Share link: {request.share_url}")
+```
+
+```bash Webhook Handler
+# Handle P2P payment webhooks
+curl -X POST https://api.fellow.app/v1/webhooks \
+  -H "Authorization: Bearer $API_KEY" \
+  -d '{
+    "url": "https://yourapp.com/p2p-webhooks",
+    "events": [
+      "p2p.payment.sent",
+      "p2p.payment.received", 
+      "p2p.payment.claimed",
+      "p2p.request.created"
+    ]
+  }'
+```
+</CodeGroup>
+
+### Webhook Events
+
+<AccordionGroup>
+  <Accordion icon="paper-plane" title="Payment Events">
+    **Outbound Payments:**
+    - `p2p.payment.sent` - Payment initiated
+    - `p2p.payment.routing` - Finding optimal path
+    - `p2p.payment.settled` - Settlement confirmed
+    - `p2p.payment.failed` - Payment failed
+  </Accordion>
+  
+  <Accordion icon="inbox" title="Receiving Events">
+    **Inbound Payments:**
+    - `p2p.payment.received` - Payment received
+    - `p2p.payment.claimed` - Recipient claimed payment
+    - `p2p.payment.pending` - Waiting for recipient action
+    - `p2p.payment.expired` - Unclaimed payment expired
+  </Accordion>
+  
+  <Accordion icon="users" title="Group Events">
+    **Group Payments:**
+    - `p2p.group.created` - Group payment created
+    - `p2p.group.contribution` - Someone contributed
+    - `p2p.group.completed` - All contributions received
+    - `p2p.group.reminder` - Reminder sent to pending contributors
+  </Accordion>
+</AccordionGroup>
+
+## Use Cases
+
+### For Individuals
+
+<CardGroup cols={2}>
+  <Card title="Family Support" icon="heart">
+    **Regular Support:**
+    - Monthly allowances to children
+    - Supporting elderly parents
+    - Emergency funds to family
+    - Cross-border family remittances
+  </Card>
+  <Card title="Social Payments" icon="users">
+    **Friend & Social:**
+    - Split restaurant and bar bills
+    - Shared vacation expenses
+    - Gift money for birthdays
+    - Rent and utility splitting
+  </Card>
+</CardGroup>
+
+### For Businesses
+
+<CardGroup cols={2}>
+  <Card title="Employee Payments" icon="briefcase">
+    **Payroll & Benefits:**
+    - Instant salary payments
+    - Bonus and commission payouts
+    - Expense reimbursements
+    - Contractor payments
+  </Card>
+  <Card title="Customer Refunds" icon="rotate-left">
+    **Refund Processing:**
+    - Instant refund processing
+    - Customer satisfaction improvement
+    - Reduced processing costs
+    - Cross-platform refund capability
+  </Card>
+</CardGroup>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Get Started" icon="rocket" href="/quickstart">
+    Start sending P2P payments with Fellow today
+  </Card>
+  <Card title="Cross-Platform Transfers" icon="arrows-left-right" href="/features/integrations">
+    Learn about platform-to-platform routing
+  </Card>
+  <Card title="API Documentation" icon="code" href="/api-reference/introduction">
+    Integrate P2P payments into your app
+  </Card>
+  <Card title="Security Guide" icon="shield" href="/security/overview">
+    Learn how Fellow protects your payments
+  </Card>
+</CardGroup>

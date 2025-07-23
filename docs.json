@@ -1,68 +1,71 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Fellow",
+  "description": "The financial router that instantly connects all your money across any platform",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#2563EB",
+    "light": "#3B82F6", 
+    "dark": "#1D4ED8"
   },
   "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Consumer App",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Overview",
             "pages": [
               "index",
-              "quickstart",
-              "development"
+              "how-it-works"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Getting Started",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "getting-started/consumers",
+              "getting-started/supported-platforms"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "Using Fellow",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "consumer/transfers",
+              "consumer/security",
+              "consumer/pricing"
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "Bank Partners",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "Partnership Program",
             "pages": [
-              "api-reference/introduction"
+              "banks/overview",
+              "banks/integration",
+              "banks/benefits"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Implementation",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "banks/getting-started",
+              "banks/technical"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Support",
+        "groups": [
+          {
+            "group": "Help & Resources",
+            "pages": [
+              "support/overview",
+              "support/troubleshooting"
             ]
           }
         ]
@@ -71,19 +74,19 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "Download App",
+          "href": "https://app.fellow.app",
+          "icon": "download"
         },
         {
-          "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
+          "anchor": "Bank Partnerships",
+          "href": "mailto:partnerships@fellow.app",
+          "icon": "handshake"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Support",
+          "href": "https://fellow.app/support",
+          "icon": "life-ring"
         }
       ]
     }
@@ -95,21 +98,79 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "Bank Partnerships",
+        "href": "mailto:partnerships@fellow.app"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Download App",
+      "href": "https://app.fellow.app"
     }
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
+      "x": "https://x.com/fellow",
+      "github": "https://github.com/fellow",
+      "linkedin": "https://linkedin.com/company/fellow"
+    },
+    "links": [
+      {
+        "header": "Product",
+        "items": [
+          {
+            "label": "Download App",
+            "href": "https://app.fellow.app"
+          },
+          {
+            "label": "How It Works",
+            "href": "https://fellow.app/how-it-works"
+          }
+        ]
+      },
+      {
+        "header": "Partners",
+        "items": [
+          {
+            "label": "Bank Partnerships",
+            "href": "https://fellow.app/banks"
+          },
+          {
+            "label": "Integration Guide",
+            "href": "https://fellow.app/integration"
+          }
+        ]
+      },
+      {
+        "header": "Company",
+        "items": [
+          {
+            "label": "About",
+            "href": "https://fellow.app/about"
+          },
+          {
+            "label": "Careers",
+            "href": "https://fellow.app/careers"
+          },
+          {
+            "label": "Contact",
+            "href": "mailto:support@fellow.app"
+          }
+        ]
+      },
+      {
+        "header": "Legal",
+        "items": [
+          {
+            "label": "Privacy Policy",
+            "href": "https://fellow.app/privacy"
+          },
+          {
+            "label": "Terms of Service",
+            "href": "https://fellow.app/terms"
+          }
+        ]
+      }
+    ]
   }
 }

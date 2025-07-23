@@ -1,80 +1,175 @@
 ---
-title: "Quickstart"
-description: "Start building awesome documentation in minutes"
+title: "Quickstart Guide"
+description: "Get started with Fellow's global financial router in minutes"
 ---
 
-## Get started in three steps
+## Getting Started with Fellow
 
-Get your documentation site running locally and make your first customization.
-
-### Step 1: Set up your local environment
-
-<AccordionGroup>
-  <Accordion icon="copy" title="Clone your docs locally">
-    During the onboarding process, you created a GitHub repository with your docs content if you didn't already have one. You can find a link to this repository in your [dashboard](https://dashboard.mintlify.com).
-    
-    To clone the repository locally so that you can make and preview changes to your docs, follow the [Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) guide in the GitHub docs.
-  </Accordion>
-  <Accordion icon="rectangle-terminal" title="Start the preview server">
-    1. Install the Mintlify CLI: `npm i -g mint`
-    2. Navigate to your docs directory and run: `mint dev`
-    3. Open `http://localhost:3000` to see your docs live!
-    
-    <Tip>Your preview updates automatically as you edit files.</Tip>
-  </Accordion>
-</AccordionGroup>
-
-### Step 2: Deploy your changes
-
-<AccordionGroup>
-  <Accordion icon="github" title="Install our GitHub app">
-    Install the Mintlify GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app).
-    
-    Our GitHub app automatically deploys your changes to your docs site, so you don't need to manage deployments yourself.
-</Accordion>
-<Accordion icon="palette" title="Update your site name and colors">
-    For a first change, let's update the name and colors of your docs site.
-
-    1. Open `docs.json` in your editor.
-    2. Change the `"name"` field to your project name.
-    3. Update the `"colors"` to match your brand.
-    4. Save and see your changes instantly at `http://localhost:3000`.
-
-    <Tip>Try changing the primary color to see an immediate difference!</Tip>
-  </Accordion>
-</AccordionGroup>
-
-### Step 3: Go live
-
-<Accordion icon="rocket" title="Publish your docs">
-  1. Commit and push your changes.
-  2. Your docs will update and be live in moments!
-</Accordion>
-
-## Next steps
-
-Now that you have your docs running, explore these key features:
-
-<CardGroup cols={2}>
-
-<Card title="Write Content" icon="pen-to-square" href="/essentials/markdown">
-  Learn MDX syntax and start writing your documentation.
-</Card>
-
-<Card title="Customize style" icon="palette" href="/essentials/settings">
-  Make your docs match your brand perfectly.
-</Card>
-
-<Card title="Add code examples" icon="square-code" href="/essentials/code">
-  Include syntax-highlighted code blocks.
-</Card>
-
-<Card title="API documentation" icon="code" href="/api-reference/introduction">
-  Auto-generate API docs from OpenAPI specs.
-</Card>
-
-</CardGroup>
+Fellow is a consumer app that functions as a global financial router, enabling you to move money instantly between any financial platforms using just phone numbers. Here's how to get started:
 
 <Note>
-  **Need help?** See our [full documentation](https://mintlify.com/docs) or join our [community](https://mintlify.com/community).
+  **Universal Access**: If you have a phone number, you already have a Fellow account. Download the consumer app to start routing money between your accounts.
 </Note>
+
+## For Individuals
+
+<Steps>
+  <Step title="Sign Up">
+    Use your phone number to access Fellow's routing network instantly. No lengthy verification process.
+    
+    <Card title="Download Fellow" icon="download" href="https://app.fellow.app">
+      Get the Fellow app for iOS or Android
+    </Card>
+  </Step>
+  
+  <Step title="Connect Your Platforms">
+    Link your existing financial accounts to the router:
+    
+    <CardGroup cols={2}>
+      <Card title="Traditional Banking" icon="bank">
+        Connect your bank accounts, Apple Pay, Google Pay
+      </Card>
+      <Card title="Crypto Wallets" icon="wallet">
+        Link Coinbase, Phantom, MetaMask, and other wallets
+      </Card>
+    </CardGroup>
+  </Step>
+  
+  <Step title="Start Routing Money">
+    Transfer funds instantly between any connected platforms:
+    
+    ```bash
+    Apple Pay → Phantom Wallet: <5 seconds
+    Coinbase → Bank Account: <5 seconds  
+    Venmo → Crypto Wallet: <5 seconds
+    ```
+    
+    <Tip>All transfers settle on blockchain with true finality, not just balance updates.</Tip>
+  </Step>
+</Steps>
+
+## For Developers
+
+<Steps>
+  <Step title="API Access">
+    Get started with Fellow's routing APIs:
+    
+    ```bash
+    curl -X POST https://api.fellow.app/v1/route \
+      -H "Authorization: Bearer YOUR_API_KEY" \
+      -H "Content-Type: application/json" \
+      -d '{
+        "from": "apple_pay",
+        "to": "coinbase_wallet", 
+        "amount": 100,
+        "recipient": "+1234567890"
+      }'
+    ```
+  </Step>
+  
+  <Step title="Test Environment">
+    Build and test routing functionality in our sandbox:
+    
+    <Card title="API Documentation" icon="code" href="/api-reference/introduction">
+      Explore our complete API reference
+    </Card>
+  </Step>
+  
+  <Step title="Go Live">
+    Deploy instant cross-platform settlement for your users:
+    
+    <CardGroup cols={2}>
+      <Card title="SDK Integration" icon="cube">
+        Easy integration of routing functionality
+      </Card>
+      <Card title="Webhooks" icon="webhook">
+        Real-time notifications for routing events
+      </Card>
+    </CardGroup>
+  </Step>
+</Steps>
+
+## For App Developers
+
+<Steps>
+  <Step title="Developer Consultation">
+    Explore integrating Fellow into your consumer app:
+    
+    <Card title="Contact Developer Relations" icon="handshake" href="mailto:developers@fellow.app">
+      Discuss API integration and partnership opportunities
+    </Card>
+  </Step>
+  
+  <Step title="API Integration">
+    Integrate Fellow's routing capabilities:
+    
+    <AccordionGroup>
+      <Accordion icon="credit-card" title="Payment Features">
+        Add instant cross-platform payments to your consumer app
+      </Accordion>
+      <Accordion icon="chart-line" title="Yield Optimization">
+        Help users automatically optimize returns across platforms
+      </Accordion>
+      <Accordion icon="building" title="White-Label SDKs">
+        Embed Fellow's routing capabilities directly in your app
+      </Accordion>
+    </AccordionGroup>
+  </Step>
+  
+  <Step title="Launch Integration">
+    Go live with Fellow's consumer-focused routing capabilities
+  </Step>
+</Steps>
+
+## Key Features Overview
+
+<CardGroup cols={2}>
+  <Card title="P2P Payments" icon="paper-plane" href="/features/workflow-automation">
+    Send money to anyone with a phone number through Fellow's routing layer
+  </Card>
+  <Card title="High-Yield Accounts" icon="piggy-bank" href="/features/collaboration">
+    Automatically optimize yield by routing funds between DeFi protocols and banking
+  </Card>
+  <Card title="Cross-Platform Transfers" icon="arrows-left-right" href="/features/integrations">
+    Move funds between any financial accounts with intelligent path optimization
+  </Card>
+  <Card title="Router Overview" icon="route" href="/features/overview">
+    Learn how Fellow's global financial router works
+  </Card>
+</CardGroup>
+
+## Settlement Time Comparison
+
+<Note>
+  **Fellow's Advantage**: We're the only infrastructure where 'instant' actually means instant settlement across any financial platform, not just instant appearance in your balance.
+</Note>
+
+| Platform | Settlement Time | Cross-Platform | Cost |
+|----------|----------------|----------------|------|
+| **Fellow Router** | **<5 seconds** | **✅ Any platform** | **1%** |
+| Venmo "Instant" | 1-3 days actual | ❌ Single platform | 1.75% |
+| Zelle | Same day | ❌ Bank-to-bank only | Free (domestic) |
+| ACH Transfer | 1-3 days | ❌ Limited compatibility | $0-3 |
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Explore Core Features" icon="compass" href="/features/overview">
+    Learn about Fellow's routing capabilities in detail
+  </Card>
+  <Card title="API Integration" icon="code" href="/api-reference/introduction">
+    Start building with Fellow's routing APIs
+  </Card>
+  <Card title="Security & Compliance" icon="shield" href="/security/overview">
+    Understand how Fellow keeps your money secure
+  </Card>
+  <Card title="Get Support" icon="life-ring" href="/resources/support">
+    Need help? Our team is here to assist
+  </Card>
+</CardGroup>
+
+---
+
+<Tip>
+  **Ready to eliminate financial platform friction?** Download Fellow and start routing money between your accounts instantly.
+</Tip>
