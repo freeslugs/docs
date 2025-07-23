@@ -1,0 +1,325 @@
+---
+title: "Installation & Setup"
+description: "Sign up for Fellow and connect your financial accounts to the router"
+---
+
+## Overview
+
+Getting started with Fellow is simple - if you have a phone number, you already have access to Fellow's routing network. No complex verification or lengthy setup process required.
+
+<Note>
+  **Universal Access**: Fellow uses your phone number as your universal financial identifier, eliminating the need for complex wallet addresses or account numbers.
+</Note>
+
+## For Individuals
+
+### Step 1: Download the Fellow App
+
+<CardGroup cols={2}>
+  <Card title="iOS App Store" icon="app-store" href="https://apps.apple.com/app/fellow">
+    Download Fellow for iPhone and iPad
+  </Card>
+  <Card title="Google Play Store" icon="google-play" href="https://play.google.com/store/apps/fellow">
+    Download Fellow for Android devices
+  </Card>
+</CardGroup>
+
+### Step 2: Phone Number Verification
+
+1. **Enter your phone number** - This becomes your universal Fellow identifier
+2. **Receive verification code** - We'll send you a secure SMS code
+3. **Complete setup** - Your Fellow account is instantly active
+
+<Tip>
+  Your phone number works across all platforms - friends can send you money even if they don't have Fellow installed.
+</Tip>
+
+### Step 3: Connect Your Financial Platforms
+
+Fellow's router can connect to any financial platform. Start by linking your most-used accounts:
+
+<AccordionGroup>
+  <Accordion icon="bank" title="Traditional Banking">
+    **Supported Platforms:**
+    - Bank accounts (ACH)
+    - Apple Pay
+    - Google Pay  
+    - PayPal
+    - Venmo
+    - Cash App
+    - Zelle (coming soon)
+    
+    **Connection Process:**
+    1. Select your bank or payment platform
+    2. Authenticate using your existing login
+    3. Choose which accounts to connect
+    4. Fellow's router handles the integration
+  </Accordion>
+  
+  <Accordion icon="wallet" title="Crypto Wallets">
+    **Supported Wallets:**
+    - Coinbase
+    - Phantom (Solana)
+    - MetaMask (Ethereum)
+    - Trust Wallet
+    - Rainbow Wallet
+    - Hardware wallets (Ledger, Trezor)
+    
+    **Connection Process:**
+    1. Select your wallet type
+    2. Connect via WalletConnect or API
+    3. Authorize Fellow router access
+    4. Select which assets to include
+  </Accordion>
+  
+  <Accordion icon="chart-line" title="Investment Platforms">
+    **Supported Platforms:**
+    - Robinhood
+    - E*TRADE
+    - Fidelity
+    - Charles Schwab
+    - TD Ameritrade
+    
+    **Coming Soon:**
+    - Interactive Brokers
+    - Webull
+    - M1 Finance
+  </Accordion>
+</AccordionGroup>
+
+### Step 4: Verify Your Setup
+
+Once connected, test your router setup:
+
+1. **Check connected accounts** - Verify all platforms appear in Fellow
+2. **Test small transfer** - Move $1 between two platforms  
+3. **Confirm settlement** - Watch it settle in under 5 seconds
+4. **Review routing path** - See how Fellow optimized your transfer
+
+<Warning>
+  **Start Small**: We recommend testing with small amounts ($1-10) before making larger transfers to familiarize yourself with the routing process.
+</Warning>
+
+## For Developers
+
+### API Setup
+
+<Steps>
+  <Step title="Get API Credentials">
+    Sign up for a developer account at [developer.fellow.app](https://developer.fellow.app)
+    
+    ```bash
+    # Your credentials will include:
+    API_KEY=flw_test_your_api_key_here
+    API_SECRET=your_secret_key_here
+    WEBHOOK_SECRET=your_webhook_secret_here
+    ```
+  </Step>
+  
+  <Step title="Install SDK">
+    Choose your preferred SDK:
+    
+    <Tabs>
+      <Tab title="Node.js">
+        ```bash
+        npm install @fellow/router-sdk
+        ```
+        
+        ```javascript
+        import { FellowRouter } from '@fellow/router-sdk';
+        
+        const router = new FellowRouter({
+          apiKey: process.env.FELLOW_API_KEY,
+          environment: 'sandbox' // or 'production'
+        });
+        ```
+      </Tab>
+      
+      <Tab title="Python">
+        ```bash
+        pip install fellow-router
+        ```
+        
+        ```python
+        from fellow import RouterClient
+        
+        client = RouterClient(
+            api_key=os.getenv('FELLOW_API_KEY'),
+            environment='sandbox'
+        )
+        ```
+      </Tab>
+      
+      <Tab title="REST API">
+        ```bash
+        curl -X POST https://api.fellow.app/v1/route \
+          -H "Authorization: Bearer YOUR_API_KEY" \
+          -H "Content-Type: application/json"
+        ```
+      </Tab>
+    </Tabs>
+  </Step>
+  
+  <Step title="Test Integration">
+    Make your first routing API call:
+    
+    ```javascript
+    const transfer = await router.createTransfer({
+      from: 'apple_pay',
+      to: 'coinbase',
+      amount: 100, // $1.00 in cents
+      recipient: '+1234567890',
+      currency: 'USD'
+    });
+    
+    console.log('Transfer initiated:', transfer.id);
+    console.log('Estimated settlement:', transfer.estimatedSettlement);
+    ```
+  </Step>
+</Steps>
+
+### Webhook Setup
+
+Configure webhooks to receive real-time routing notifications:
+
+```javascript
+app.post('/webhooks/fellow', (req, res) => {
+  const signature = req.headers['fellow-signature'];
+  const payload = JSON.stringify(req.body);
+  
+  // Verify webhook signature
+  const expectedSignature = crypto
+    .createHmac('sha256', process.env.FELLOW_WEBHOOK_SECRET)
+    .update(payload)
+    .digest('hex');
+  
+  if (signature === expectedSignature) {
+    const event = req.body;
+    
+    switch (event.type) {
+      case 'transfer.completed':
+        console.log('Transfer completed:', event.data.transferId);
+        break;
+      case 'transfer.failed':
+        console.log('Transfer failed:', event.data.error);
+        break;
+    }
+  }
+  
+  res.status(200).send('OK');
+});
+```
+
+## For Businesses
+
+### Enterprise Setup
+
+<Steps>
+  <Step title="Contact Partnership Team">
+    Reach out to discuss your routing infrastructure needs:
+    
+    <Card title="Schedule Consultation" icon="calendar" href="mailto:partnerships@fellow.app">
+      Book a call with our business development team
+    </Card>
+  </Step>
+  
+  <Step title="Custom Integration Planning">
+    Our team will work with you to design:
+    - Custom routing logic for your use case
+    - White-label implementation options  
+    - Compliance and regulatory requirements
+    - Volume pricing and SLA agreements
+  </Step>
+  
+  <Step title="Sandbox Environment">
+    Test your integration in our dedicated business sandbox:
+    - Higher rate limits
+    - Advanced routing features
+    - Dedicated support channel
+    - Custom webhook endpoints
+  </Step>
+  
+  <Step title="Production Deployment">
+    Go live with dedicated infrastructure:
+    - Dedicated routing nodes
+    - Priority settlement processing
+    - 24/7 technical support
+    - Custom SLA guarantees
+  </Step>
+</Steps>
+
+## System Requirements
+
+### Mobile Apps
+- **iOS**: iOS 14.0 or later
+- **Android**: Android 8.0 (API level 26) or later
+- **Internet**: Stable internet connection required
+- **Permissions**: Camera (for QR codes), Contacts (optional)
+
+### API Integration
+- **Webhook endpoint**: HTTPS required for production
+- **Rate limits**: 1000 requests/minute (can be increased)
+- **Supported formats**: JSON only
+- **Authentication**: Bearer token authentication
+
+## Security Setup
+
+<Warning>
+  **Important**: Enable two-factor authentication (2FA) on your Fellow account for enhanced security.
+</Warning>
+
+### Account Security
+
+1. **Enable 2FA** - Use your phone's authenticator app
+2. **Set spending limits** - Configure daily/monthly transfer limits  
+3. **Review permissions** - Regularly audit connected platform access
+4. **Monitor activity** - Enable real-time notifications for all transfers
+
+### API Security
+
+1. **Store credentials securely** - Never commit API keys to version control
+2. **Use environment variables** - Load sensitive data from env files
+3. **Rotate keys regularly** - Update API keys every 90 days
+4. **Verify webhooks** - Always validate webhook signatures
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion icon="phone" title="Phone verification issues">
+    - Check that you entered the correct phone number
+    - Ensure you have cellular or SMS service
+    - Wait 2-3 minutes before requesting a new code
+    - Contact support if codes aren't arriving
+  </Accordion>
+  
+  <Accordion icon="link" title="Platform connection failures">
+    - Verify your login credentials are correct
+    - Check if the platform is experiencing outages
+    - Try connecting from the platform's native app first
+    - Some platforms require additional permissions
+  </Accordion>
+  
+  <Accordion icon="code" title="API integration issues">
+    - Verify your API keys are correct and active
+    - Check that your webhook endpoint is accessible
+    - Review rate limits and request formatting
+    - Use sandbox environment for testing
+  </Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Configure Settings" icon="gear" href="/configuration">
+    Customize your Fellow router settings
+  </Card>
+  <Card title="Explore Features" icon="compass" href="/features/overview">
+    Learn about all Fellow routing capabilities
+  </Card>
+  <Card title="Security Guide" icon="shield" href="/security/overview">
+    Understand Fellow's security measures
+  </Card>
+  <Card title="Get Support" icon="life-ring" href="/resources/support">
+    Need help? Contact our support team
+  </Card>
+</CardGroup>

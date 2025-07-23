@@ -1,0 +1,440 @@
+---
+title: "Configuration"
+description: "Customize your Fellow router settings and preferences"
+---
+
+## Overview
+
+Once you've connected your financial platforms to Fellow's router, you can customize how transfers are routed, set security preferences, and optimize your experience.
+
+<Note>
+  **Smart Defaults**: Fellow's router comes pre-configured with optimal settings, but you can customize everything to match your preferences.
+</Note>
+
+## Router Settings
+
+### Default Routing Preferences
+
+Configure how Fellow's router selects paths for your transfers:
+
+<AccordionGroup>
+  <Accordion icon="zap" title="Speed Priority">
+    **Optimize for fastest settlement time**
+    
+    - Prioritizes routes that settle in under 5 seconds
+    - May incur slightly higher fees for instant settlement
+    - Best for urgent transfers and daily spending
+    
+    ```json
+    {
+      "routing_priority": "speed",
+      "max_settlement_time": "5s",
+      "allow_higher_fees": true
+    }
+    ```
+  </Accordion>
+  
+  <Accordion icon="dollar-sign" title="Cost Priority">
+    **Optimize for lowest fees**
+    
+    - Selects the most cost-effective routing path
+    - May take slightly longer (still under 30 seconds)
+    - Best for large transfers and cost-conscious users
+    
+    ```json
+    {
+      "routing_priority": "cost",
+      "max_fee_percentage": 0.5,
+      "allow_slower_settlement": true
+    }
+    ```
+  </Accordion>
+  
+  <Accordion icon="balance-scale" title="Balanced">
+    **Balance speed and cost (default)**
+    
+    - Optimizes for best overall value
+    - Considers both settlement time and fees
+    - Recommended for most users
+    
+    ```json
+    {
+      "routing_priority": "balanced",
+      "max_settlement_time": "10s",
+      "max_fee_percentage": 1.0
+    }
+    ```
+  </Accordion>
+</AccordionGroup>
+
+### Platform Preferences
+
+Set your preferred platforms for different types of transactions:
+
+<Tabs>
+  <Tab title="Receiving Money">
+    Configure where you prefer to receive money by default:
+    
+    **Priority Order:**
+    1. High-yield savings account (maximize earning)
+    2. Checking account (easy access)
+    3. Crypto wallet (USDC for stability)
+    4. Investment account (auto-invest)
+    
+    <Card title="Auto-Routing Rules" icon="gear">
+      Set up automatic routing based on amount, sender, or time
+    </Card>
+  </Tab>
+  
+  <Tab title="Sending Money">
+    Choose your preferred funding sources:
+    
+    **Smart Funding:**
+    - Use checking account for small amounts (<$100)
+    - Use high-yield savings for large amounts (>$1000)
+    - Use crypto wallet for crypto-native recipients
+    - Use credit card for rewards (pay off automatically)
+  </Tab>
+  
+  <Tab title="Yield Optimization">
+    Automatically move idle funds to highest-yield opportunities:
+    
+    **Yield Strategy:**
+    - Keep $500 in checking for immediate access
+    - Move excess to high-yield savings (4.5% APY)
+    - Auto-invest surplus in diversified portfolio
+    - Stake stablecoins in DeFi when profitable
+  </Tab>
+</Tabs>
+
+## Security Settings
+
+### Transfer Limits
+
+<Warning>
+  **Important**: Set appropriate limits to protect your funds while maintaining convenience.
+</Warning>
+
+<AccordionGroup>
+  <Accordion icon="clock" title="Time-Based Limits">
+    **Daily Limits:**
+    - Send: $5,000 per day (default)
+    - Receive: Unlimited
+    - Cross-platform: $2,000 per day
+    
+    **Monthly Limits:**
+    - Send: $50,000 per month
+    - Crypto transfers: $25,000 per month
+    - International: $10,000 per month
+  </Accordion>
+  
+  <Accordion icon="shield-check" title="Authentication Requirements">
+    **Biometric Authentication:**
+    - Required for transfers >$500
+    - Face ID / Touch ID / Fingerprint
+    - Fallback to PIN if biometrics fail
+    
+    **Two-Factor Authentication:**
+    - Required for transfers >$2,000
+    - SMS or authenticator app
+    - Hardware key support available
+  </Accordion>
+  
+  <Accordion icon="bell" title="Alert Preferences">
+    **Real-time Notifications:**
+    - Push notifications for all transfers
+    - SMS for transfers >$1,000
+    - Email summary daily
+    - Fraud alerts immediately
+  </Accordion>
+</AccordionGroup>
+
+### Privacy Settings
+
+<Tabs>
+  <Tab title="Transaction Privacy">
+    **Data Sharing:**
+    - Share transaction data with connected platforms: ✅
+    - Allow analytics for routing optimization: ✅
+    - Share data with third-party services: ❌
+    - Enable transaction insights: ✅
+    
+    **Visibility:**
+    - Show pending transfers to recipients: ✅
+    - Share routing path details: ❌
+    - Enable read receipts: ✅
+  </Tab>
+  
+  <Tab title="Contact Permissions">
+    **Phone Number Discovery:**
+    - Allow others to find you by phone number: ✅
+    - Show in Fellow directory: ❌
+    - Enable friend suggestions: ✅
+    - Share with marketing partners: ❌
+  </Tab>
+</Tabs>
+
+## API Configuration
+
+### Development Settings
+
+For developers integrating Fellow's routing APIs:
+
+<CodeGroup>
+```javascript Environment Setup
+// Environment configuration
+const config = {
+  environment: process.env.NODE_ENV === 'production' ? 'production' : 'sandbox',
+  apiKey: process.env.FELLOW_API_KEY,
+  webhookSecret: process.env.FELLOW_WEBHOOK_SECRET,
+  baseUrl: process.env.NODE_ENV === 'production' 
+    ? 'https://api.fellow.app' 
+    : 'https://sandbox-api.fellow.app'
+};
+
+const router = new FellowRouter(config);
+```
+
+```python Rate Limiting
+# Configure rate limiting
+client = RouterClient(
+    api_key=os.getenv('FELLOW_API_KEY'),
+    rate_limit={
+        'requests_per_minute': 100,
+        'burst_capacity': 20,
+        'retry_after': True
+    }
+)
+```
+
+```bash Webhook Configuration
+# Configure webhook endpoint
+curl -X POST https://api.fellow.app/v1/webhooks \
+  -H "Authorization: Bearer $FELLOW_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "url": "https://yourapp.com/webhooks/fellow",
+    "events": ["transfer.completed", "transfer.failed"],
+    "secret": "your-webhook-secret"
+  }'
+```
+</CodeGroup>
+
+### Production Settings
+
+<Steps>
+  <Step title="API Key Management">
+    **Production Keys:**
+    - Generate production API keys
+    - Set up key rotation schedule
+    - Configure environment variables
+    - Enable API monitoring
+  </Step>
+  
+  <Step title="Webhook Configuration">
+    **Endpoint Setup:**
+    - HTTPS endpoint required
+    - Signature verification enabled
+    - Retry logic configured
+    - Error handling implemented
+  </Step>
+  
+  <Step title="Monitoring & Logging">
+    **Observability:**
+    - Enable request logging
+    - Set up error alerting
+    - Monitor API performance
+    - Track routing success rates
+  </Step>
+</Steps>
+
+## Business Configuration
+
+### White-Label Settings
+
+For businesses using Fellow's routing infrastructure:
+
+<AccordionGroup>
+  <Accordion icon="palette" title="Branding">
+    **Custom Branding:**
+    - Upload your logo and colors
+    - Customize transaction notifications
+    - Brand the routing interface
+    - White-label mobile SDKs
+  </Accordion>
+  
+  <Accordion icon="users" title="User Management">
+    **Access Control:**
+    - Set up user roles and permissions
+    - Configure approval workflows
+    - Enable bulk user provisioning
+    - Integrate with existing identity providers
+  </Accordion>
+  
+  <Accordion icon="chart-bar" title="Analytics & Reporting">
+    **Business Intelligence:**
+    - Custom routing analytics dashboard
+    - Transaction volume reporting
+    - Cost optimization insights
+    - Compliance audit logs
+  </Accordion>
+</AccordionGroup>
+
+## Advanced Configuration
+
+### Liquidity Management
+
+Configure how Fellow manages liquidity for optimal routing:
+
+<Tip>
+  **Enterprise Feature**: Advanced liquidity management is available for business customers with high transaction volumes.
+</Tip>
+
+```json Liquidity Configuration
+{
+  "liquidity_preferences": {
+    "minimum_reserves": {
+      "USD": 10000,
+      "USDC": 5000,
+      "ETH": 1.0
+    },
+    "rebalancing": {
+      "enabled": true,
+      "frequency": "hourly",
+      "threshold": 0.2
+    },
+    "yield_optimization": {
+      "enabled": true,
+      "max_lockup": "24h",
+      "min_yield": 0.04
+    }
+  }
+}
+```
+
+### Custom Routing Rules
+
+Create custom rules for specific routing scenarios:
+
+<CodeGroup>
+```javascript Amount-Based Routing
+// Route large amounts through traditional banking
+router.addRule({
+  condition: { amount: { $gt: 10000 } },
+  action: { 
+    preferredPath: ['bank_account', 'ach'],
+    requireApproval: true 
+  }
+});
+```
+
+```javascript Time-Based Routing
+// Use different routing during business hours
+router.addRule({
+  condition: { 
+    time: { between: ['09:00', '17:00'] },
+    timezone: 'America/New_York'
+  },
+  action: { 
+    preferredPath: ['instant_settlement'],
+    maxFee: 0.02 
+  }
+});
+```
+
+```javascript Recipient-Based Routing
+// Special routing for business partners
+router.addRule({
+  condition: { 
+    recipient: { in: ['business_partners'] }
+  },
+  action: { 
+    preferredPath: ['stablecoin', 'enterprise_rails'],
+    notifications: ['email', 'slack']
+  }
+});
+```
+</CodeGroup>
+
+## Backup & Recovery
+
+### Account Recovery
+
+<Steps>
+  <Step title="Backup Methods">
+    **Multiple Recovery Options:**
+    - Phone number verification
+    - Email recovery
+    - Hardware key backup
+    - Social recovery (trusted contacts)
+  </Step>
+  
+  <Step title="Seed Phrase">
+    **Crypto Wallet Recovery:**
+    - Generate and store seed phrase securely
+    - Test recovery process regularly
+    - Never share with anyone
+    - Use hardware wallet for large amounts
+  </Step>
+  
+  <Step title="Emergency Access">
+    **Emergency Procedures:**
+    - Emergency contact designation
+    - Account freeze procedures
+    - Legal recovery process
+    - Insurance claim procedures
+  </Step>
+</Steps>
+
+## Configuration API
+
+Manage settings programmatically:
+
+<CodeGroup>
+```javascript Get Current Config
+const config = await router.getConfiguration();
+console.log('Current routing preferences:', config.routing);
+console.log('Security settings:', config.security);
+```
+
+```javascript Update Settings
+await router.updateConfiguration({
+  routing: {
+    priority: 'speed',
+    maxFee: 0.015
+  },
+  security: {
+    dailyLimit: 7500,
+    requireBiometric: true
+  }
+});
+```
+
+```javascript Bulk Configuration
+// Apply configuration template
+await router.applyTemplate('high_volume_business', {
+  customizations: {
+    dailyLimit: 100000,
+    approvalWorkflow: true,
+    complianceReporting: true
+  }
+});
+```
+</CodeGroup>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Core Features" icon="compass" href="/features/overview">
+    Explore Fellow's routing capabilities
+  </Card>
+  <Card title="Security Guide" icon="shield" href="/security/overview">
+    Learn about Fellow's security measures
+  </Card>
+  <Card title="API Reference" icon="code" href="/api-reference/introduction">
+    Detailed API documentation
+  </Card>
+  <Card title="Get Support" icon="life-ring" href="/resources/support">
+    Need help with configuration?
+  </Card>
+</CardGroup>
