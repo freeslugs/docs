@@ -2,6 +2,7 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
   "name": "Fellow",
+  "description": "The first crypto-compatible bank that functions as a global router for all your financial accounts",
   "colors": {
     "primary": "#2563EB",
     "light": "#3B82F6", 
@@ -32,21 +33,9 @@
             ]
           },
           {
-            "group": "Guides",
-            "pages": [
-              "guides/user-management",
-              "guides/project-setup",
-              "guides/best-practices",
-              "guides/troubleshooting"
-            ]
-          },
-          {
             "group": "Security & Compliance",
             "pages": [
-              "security/overview",
-              "security/authentication",
-              "security/data-protection",
-              "security/compliance"
+              "security/overview"
             ]
           }
         ]
@@ -57,18 +46,16 @@
           {
             "group": "API Documentation",
             "pages": [
-              "api-reference/introduction",
-              "api-reference/authentication",
-              "api-reference/rate-limits"
+              "api-reference/introduction"
             ]
           },
           {
             "group": "Endpoints",
             "pages": [
-              "api-reference/endpoint/users",
-              "api-reference/endpoint/projects",
-              "api-reference/endpoint/workflows",
-              "api-reference/endpoint/webhooks"
+              "api-reference/endpoint/create",
+              "api-reference/endpoint/get",
+              "api-reference/endpoint/delete",
+              "api-reference/endpoint/webhook"
             ]
           }
         ]
@@ -77,19 +64,9 @@
         "tab": "Resources",
         "groups": [
           {
-            "group": "Support",
+            "group": "Support & Community",
             "pages": [
-              "resources/support",
-              "resources/community",
-              "resources/changelog"
-            ]
-          },
-          {
-            "group": "Advanced",
-            "pages": [
-              "advanced/customization",
-              "advanced/enterprise",
-              "advanced/integrations"
+              "resources/support"
             ]
           }
         ]
@@ -97,6 +74,11 @@
     ],
     "global": {
       "anchors": [
+        {
+          "anchor": "Download App",
+          "href": "https://app.fellow.app",
+          "icon": "download"
+        },
         {
           "anchor": "Support",
           "href": "https://fellow.app/support",
@@ -128,7 +110,7 @@
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
+      "label": "Download App",
       "href": "https://app.fellow.app"
     }
   },
@@ -137,6 +119,76 @@
       "x": "https://x.com/fellow",
       "github": "https://github.com/fellow",
       "linkedin": "https://linkedin.com/company/fellow"
-    }
+    },
+    "links": [
+      {
+        "header": "Product",
+        "items": [
+          {
+            "label": "Download App",
+            "href": "https://app.fellow.app"
+          },
+          {
+            "label": "How It Works",
+            "href": "/features/overview"
+          },
+          {
+            "label": "Security",
+            "href": "/security/overview"
+          }
+        ]
+      },
+      {
+        "header": "Developers",
+        "items": [
+          {
+            "label": "API Docs",
+            "href": "/api-reference/introduction"
+          },
+          {
+            "label": "SDK",
+            "href": "https://github.com/fellow/sdk"
+          },
+          {
+            "label": "Community",
+            "href": "https://community.fellow.app"
+          }
+        ]
+      },
+      {
+        "header": "Company",
+        "items": [
+          {
+            "label": "About",
+            "href": "https://fellow.app/about"
+          },
+          {
+            "label": "Careers",
+            "href": "https://fellow.app/careers"
+          },
+          {
+            "label": "Contact",
+            "href": "mailto:support@fellow.app"
+          }
+        ]
+      },
+      {
+        "header": "Legal",
+        "items": [
+          {
+            "label": "Privacy Policy",
+            "href": "https://fellow.app/privacy"
+          },
+          {
+            "label": "Terms of Service",
+            "href": "https://fellow.app/terms"
+          },
+          {
+            "label": "Compliance",
+            "href": "/security/overview"
+          }
+        ]
+      }
+    ]
   }
 }
