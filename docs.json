@@ -2,7 +2,7 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
   "name": "Fellow",
-  "description": "The first crypto-compatible bank that functions as a global router for all your financial accounts",
+  "description": "The financial router that instantly connects all your money across any platform",
   "colors": {
     "primary": "#2563EB",
     "light": "#3B82F6", 
@@ -12,61 +12,60 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Documentation",
+        "tab": "Consumer App",
         "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "index",
+              "how-it-works"
+            ]
+          },
           {
             "group": "Getting Started",
             "pages": [
-              "index",
-              "quickstart",
-              "installation",
-              "configuration"
+              "getting-started/consumers",
+              "getting-started/supported-platforms"
             ]
           },
           {
-            "group": "Core Features",
+            "group": "Using Fellow",
             "pages": [
-              "features/overview",
-              "features/workflow-automation",
-              "features/integrations",
-              "features/collaboration"
-            ]
-          },
-          {
-            "group": "Security & Compliance",
-            "pages": [
-              "security/overview"
+              "consumer/transfers",
+              "consumer/security",
+              "consumer/pricing"
             ]
           }
         ]
       },
       {
-        "tab": "API Reference",
+        "tab": "Bank Partners",
         "groups": [
           {
-            "group": "API Documentation",
+            "group": "Partnership Program",
             "pages": [
-              "api-reference/introduction"
+              "banks/overview",
+              "banks/integration",
+              "banks/benefits"
             ]
           },
           {
-            "group": "Endpoints",
+            "group": "Implementation",
             "pages": [
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "banks/getting-started",
+              "banks/technical"
             ]
           }
         ]
       },
       {
-        "tab": "Resources",
+        "tab": "Support",
         "groups": [
           {
-            "group": "Support & Community",
+            "group": "Help & Resources",
             "pages": [
-              "resources/support"
+              "support/overview",
+              "support/troubleshooting"
             ]
           }
         ]
@@ -80,19 +79,14 @@
           "icon": "download"
         },
         {
+          "anchor": "Bank Partnerships",
+          "href": "mailto:partnerships@fellow.app",
+          "icon": "handshake"
+        },
+        {
           "anchor": "Support",
           "href": "https://fellow.app/support",
           "icon": "life-ring"
-        },
-        {
-          "anchor": "Community",
-          "href": "https://community.fellow.app",
-          "icon": "users"
-        },
-        {
-          "anchor": "Status",
-          "href": "https://status.fellow.app",
-          "icon": "chart-line"
         }
       ]
     }
@@ -104,8 +98,8 @@
   "navbar": {
     "links": [
       {
-        "label": "Contact Support",
-        "href": "mailto:support@fellow.app"
+        "label": "Bank Partnerships",
+        "href": "mailto:partnerships@fellow.app"
       }
     ],
     "primary": {
@@ -129,21 +123,21 @@
             "href": "https://app.fellow.app"
           },
           {
-            "label": "Website",
-            "href": "https://fellow.app"
+            "label": "How It Works",
+            "href": "https://fellow.app/how-it-works"
           }
         ]
       },
       {
-        "header": "Developers",
+        "header": "Partners",
         "items": [
           {
-            "label": "GitHub",
-            "href": "https://github.com/fellow"
+            "label": "Bank Partnerships",
+            "href": "https://fellow.app/banks"
           },
           {
-            "label": "Community",
-            "href": "https://community.fellow.app"
+            "label": "Integration Guide",
+            "href": "https://fellow.app/integration"
           }
         ]
       },
