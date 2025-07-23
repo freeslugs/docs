@@ -129,12 +129,8 @@
             "href": "https://app.fellow.app"
           },
           {
-            "label": "How It Works",
-            "href": "/features/overview"
-          },
-          {
-            "label": "Security",
-            "href": "/security/overview"
+            "label": "Website",
+            "href": "https://fellow.app"
           }
         ]
       },
@@ -142,12 +138,8 @@
         "header": "Developers",
         "items": [
           {
-            "label": "API Docs",
-            "href": "/api-reference/introduction"
-          },
-          {
-            "label": "SDK",
-            "href": "https://github.com/fellow/sdk"
+            "label": "GitHub",
+            "href": "https://github.com/fellow"
           },
           {
             "label": "Community",
@@ -182,10 +174,6 @@
           {
             "label": "Terms of Service",
             "href": "https://fellow.app/terms"
-          },
-          {
-            "label": "Compliance",
-            "href": "/security/overview"
           }
         ]
       }
