@@ -1,68 +1,95 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Fellow",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#2563EB",
+    "light": "#3B82F6", 
+    "dark": "#1D4ED8"
   },
   "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Documentation",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Getting Started",
             "pages": [
               "index",
               "quickstart",
-              "development"
+              "installation",
+              "configuration"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Core Features",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "features/overview",
+              "features/workflow-automation",
+              "features/integrations",
+              "features/collaboration"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "Guides",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "guides/user-management",
+              "guides/project-setup",
+              "guides/best-practices",
+              "guides/troubleshooting"
             ]
           },
           {
-            "group": "AI tools",
+            "group": "Security & Compliance",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "security/overview",
+              "security/authentication",
+              "security/data-protection",
+              "security/compliance"
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "API Reference",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "API Documentation",
             "pages": [
-              "api-reference/introduction"
+              "api-reference/introduction",
+              "api-reference/authentication",
+              "api-reference/rate-limits"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Endpoints",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "api-reference/endpoint/users",
+              "api-reference/endpoint/projects",
+              "api-reference/endpoint/workflows",
+              "api-reference/endpoint/webhooks"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Resources",
+        "groups": [
+          {
+            "group": "Support",
+            "pages": [
+              "resources/support",
+              "resources/community",
+              "resources/changelog"
+            ]
+          },
+          {
+            "group": "Advanced",
+            "pages": [
+              "advanced/customization",
+              "advanced/enterprise",
+              "advanced/integrations"
             ]
           }
         ]
@@ -71,19 +98,19 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "Support",
+          "href": "https://fellow.app/support",
+          "icon": "life-ring"
         },
         {
           "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
+          "href": "https://community.fellow.app",
+          "icon": "users"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Status",
+          "href": "https://status.fellow.app",
+          "icon": "chart-line"
         }
       ]
     }
@@ -95,21 +122,21 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "Contact Support",
+        "href": "mailto:support@fellow.app"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "href": "https://app.fellow.app"
     }
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/fellow",
+      "github": "https://github.com/fellow",
+      "linkedin": "https://linkedin.com/company/fellow"
     }
   }
 }
