@@ -36,30 +36,16 @@ The Transfer Router is Fellow's proprietary technology that creates a universal 
 The Fellow Router operates across multiple interconnected layers to provide seamless cross-platform transfers:
 
 ```mermaid
-graph TD
-    A[User Transfer Request] --> B[Router Intelligence Engine]
-    B --> C[Path Optimization]
-    B --> D[Protocol Translation]
-    B --> E[Liquidity Management]
+graph LR
+    A[Chase Bank] --> B[Fellow Router]
+    B --> C[USDC Pool]
+    B --> D[Circle/BitGo]
+    C --> E[Instant Credit]
+    D --> F[Coinbase Account]
+    E --> F
     
-    C --> F[Traditional Banking]
-    C --> G[Cryptocurrency Networks]
-    C --> H[Investment Platforms]
-    
-    D --> I[ACH Processing]
-    D --> J[Blockchain Transactions]
-    D --> K[API Integrations]
-    
-    E --> L[Liquidity Pool]
-    L --> M[Instant Settlement]
-    
-    F --> N[Destination Account]
-    G --> N
-    H --> N
-    
-    I --> O[Background Settlement]
-    J --> O
-    K --> O
+    G[ACH Settlement] --> H[Pool Repayment]
+    H --> C
 ```
 
 ### How Routing Actually Works
