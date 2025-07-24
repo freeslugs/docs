@@ -17,7 +17,7 @@
           {
             "group": "Overview",
             "pages": [
-              "overview/what-is-fellow",
+              "index",
               "overview/how-fellow-works"
             ]
           },
