@@ -36,19 +36,11 @@ The Transfer Router is Fellow's proprietary technology that creates a universal 
 The Fellow Router operates across multiple interconnected layers to provide seamless cross-platform transfers:
 
 ```mermaid
-graph LR
-    subgraph "Instant Transfer Flow"
-        A[Chase Bank] --> B[Fellow Router]
-        B --> C[User's Credit Card]
-        C --> D[Circle/BitGo]
-        D --> E[Coinbase Account]
-    end
+flowchart LR
+    A[Chase Bank] --> B[Fellow Router] --> C[Credit Card] --> D[Circle/BitGo] --> E[Coinbase]
+    F[ACH Settlement] -.-> G[Credit Paid Off]
     
-    subgraph "Settlement Flow"
-        F[ACH Settlement<br/>2-4 days] --> G[Credit Card<br/>Balance Paid]
-    end
-    
-    style A fill:#e1f5fe
+    style A fill:#e3f2fd
     style E fill:#e8f5e8
     style F fill:#fff3e0
     style G fill:#fff3e0
