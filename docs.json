@@ -17,35 +17,33 @@
           {
             "group": "Overview",
             "pages": [
-              "index",
-              "how-it-works"
+              "overview/what-is-fellow",
+              "overview/how-fellow-works"
             ]
           },
           {
             "group": "Getting Started",
             "pages": [
-              "getting-started/consumers",
-              "getting-started/supported-platforms"
+              "overview/getting-started",
+              "using-fellow/supported-platforms"
             ]
           },
           {
             "group": "Using Fellow",
             "pages": [
-              "consumer/transfers",
-              "consumer/security",
-              "consumer/pricing"
+              "using-fellow/banking-features",
+              "using-fellow/transfer-router",
+              "using-fellow/become-your-own-bank"
             ]
-          }
-        ]
-      },
-      {
-        "tab": "Support",
-        "groups": [
+          },
           {
-            "group": "Help & Resources",
+            "group": "Reference",
             "pages": [
-              "support/overview",
-              "support/troubleshooting"
+              "reference/fees-and-pricing",
+              "reference/security-and-risk",
+              "reference/faq",
+              "reference/legal-and-terms",
+              "reference/api-integrations-coming-soon"
             ]
           }
         ]
@@ -55,13 +53,13 @@
       "anchors": [
         {
           "anchor": "Download App",
-          "href": "https://app.fellow.app",
+          "href": "https://fellow.money",
           "icon": "download"
         },
         {
-          "anchor": "Support",
-          "href": "https://fellow.app/support",
-          "icon": "life-ring"
+          "anchor": "Become an LP",
+          "href": "https://fellow.money",
+          "icon": "coins"
         }
       ]
     }
@@ -74,7 +72,7 @@
     "primary": {
       "type": "button",
       "label": "Download App",
-      "href": "https://app.fellow.app"
+      "href": "https://fellow.money"
     }
   },
   "footer": {
@@ -89,20 +87,32 @@
         "items": [
           {
             "label": "Download App",
-            "href": "https://app.fellow.app"
+            "href": "https://fellow.money"
           },
           {
             "label": "How It Works",
-            "href": "https://fellow.app/how-it-works"
+            "href": "https://docs.fellow.money/overview/how-fellow-works"
+          },
+          {
+            "label": "Become Your Own Bank",
+            "href": "https://docs.fellow.money/using-fellow/become-your-own-bank"
           }
         ]
       },
       {
-        "header": "Partners",
+        "header": "Technology",
         "items": [
           {
-            "label": "Integration Guide",
-            "href": "https://fellow.app/integration"
+            "label": "Transfer Router",
+            "href": "https://docs.fellow.money/using-fellow/transfer-router"
+          },
+          {
+            "label": "Supported Platforms",
+            "href": "https://docs.fellow.money/using-fellow/supported-platforms"
+          },
+          {
+            "label": "API (Coming Soon)",
+            "href": "https://docs.fellow.money/reference/api-integrations-coming-soon"
           }
         ]
       },
@@ -111,15 +121,15 @@
         "items": [
           {
             "label": "About",
-            "href": "https://fellow.app/about"
+            "href": "https://fellow.money/about"
           },
           {
             "label": "Careers",
-            "href": "https://fellow.app/careers"
+            "href": "https://fellow.money/careers"
           },
           {
             "label": "Contact",
-            "href": "mailto:support@fellow.app"
+            "href": "mailto:support@fellow.money"
           }
         ]
       },
@@ -127,12 +137,20 @@
         "header": "Legal",
         "items": [
           {
+            "label": "FAQ",
+            "href": "https://docs.fellow.money/reference/faq"
+          },
+          {
+            "label": "Fees & Pricing",
+            "href": "https://docs.fellow.money/reference/fees-and-pricing"
+          },
+          {
             "label": "Privacy Policy",
-            "href": "https://fellow.app/privacy"
+            "href": "https://fellow.money/privacy"
           },
           {
             "label": "Terms of Service",
-            "href": "https://fellow.app/terms"
+            "href": "https://fellow.money/terms"
           }
         ]
       }
