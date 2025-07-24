@@ -3,8 +3,6 @@ title: "Transfer Router"
 description: "Deep dive into Fellow's router technology that enables instant cross-platform money movement through intelligent path optimization and universal financial connectivity"
 ---
 
-Fellow's Transfer Router is the core technical infrastructure that enables instant settlement between any financial platforms - from traditional banks to cryptocurrency networks to investment accounts.
-
 <Info>
 **Universal Financial Abstraction**: The router treats all financial platforms the same way, whether you're moving between Chase and Coinbase or Ethereum and Solana.
 </Info>
@@ -165,21 +163,26 @@ For a complete list of supported platforms and networks, see our [Supported Plat
 
 ## Liquidity Pool Integration
 
-### Dynamic Pool Management
+### Single Pool Architecture
 
-The router intelligently manages multiple liquidity pools to optimize capital efficiency and user experience:
+Fellow starts with one primary liquidity pool to keep things simple and focused:
 
-**Pool Types:**
-- **Primary Pool**: USDC-denominated pool for most transfers
-- **Crypto Pools**: Native token pools for specific blockchain transfers  
-- **Fiat Pools**: Traditional currency pools for international transfers
-- **Emergency Reserves**: High-yield backup pools for system stability
+**USDC Pool:**
+- **Single Asset**: LPs deposit USDC to provide liquidity for all transfers
+- **Short-Term Loans**: Pool backs 2-4 day credit instruments for instant settlement
+- **Universal Coverage**: USDC pool handles conversions for all transfer types via our integration partners
+- **Simplified Management**: One pool means clearer economics and easier risk management
 
-**Pool Orchestration:**
-- **Load Balancing**: Distributes transfer requests across available pools
-- **Yield Optimization**: Routes LP capital to highest-returning opportunities
-- **Risk Distribution**: Spreads default risk across multiple pool participants
-- **Capacity Management**: Prevents over-utilization of any single pool
+**How It Works:**
+1. **LP Deposits**: Users stake USDC to earn yield from transfer fees
+2. **Credit Backing**: Pool provides instant liquidity when users request transfers
+3. **Settlement**: Pool gets repaid when ACH transfers complete (2-4 days)
+4. **Yield Distribution**: Transfer fees flow back to LPs proportional to their stake
+
+**Pool Management:**
+- **Dynamic Rates**: Interest rates adjust based on pool utilization
+- **Risk Controls**: Per-user credit limits and automated default recovery
+- **Reserve Management**: Portion of fees held in reserve for stability
 
 ### LP Integration Features
 
@@ -210,23 +213,6 @@ The router intelligently manages multiple liquidity pools to optimize capital ef
     - Integration with collections infrastructure for default recovery
   </Card>
 </CardGroup>
-
----
-
-## Performance Metrics
-
-**Current Router Performance:**
-- **Average Transfer Time**: 4.2 seconds (source to destination availability)
-- **Success Rate**: 99.7% for all transfer types
-- **Cost Savings**: 60-80% reduction vs traditional wire transfers
-- **Platform Coverage**: 10,000+ supported financial institutions
-- **Uptime**: 99.95% router availability (excluding planned maintenance)
-
-**Scalability Targets:**
-- **Transaction Volume**: Designed to handle 1M+ transfers per day
-- **Concurrent Users**: Support for 100K+ simultaneous active users
-- **Geographic Expansion**: 50+ countries by end of 2025
-- **Platform Integrations**: 25,000+ supported institutions by 2026
 
 ---
 
