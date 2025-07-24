@@ -38,14 +38,11 @@ The Fellow Router operates across multiple interconnected layers to provide seam
 ```mermaid
 graph LR
     A[Chase Bank] --> B[Fellow Router]
-    B --> C[USDC Pool]
-    B --> D[Circle/BitGo]
-    C --> E[Instant Credit]
-    D --> F[Coinbase Account]
-    E --> F
+    B --> C[User's Credit Card]
+    C --> D[Circle/BitGo]
+    D --> E[Coinbase Account]
     
-    G[ACH Settlement] --> H[Pool Repayment]
-    H --> C
+    F[ACH Settlement<br/>2-4 days] --> G[Credit Card<br/>Balance Paid]
 ```
 
 ### How Routing Actually Works
