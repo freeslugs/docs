@@ -39,26 +39,6 @@
         ]
       },
       {
-        "tab": "Bank Partners",
-        "groups": [
-          {
-            "group": "Partnership Program",
-            "pages": [
-              "banks/overview",
-              "banks/integration",
-              "banks/benefits"
-            ]
-          },
-          {
-            "group": "Implementation",
-            "pages": [
-              "banks/getting-started",
-              "banks/technical"
-            ]
-          }
-        ]
-      },
-      {
         "tab": "Support",
         "groups": [
           {
@@ -79,11 +59,6 @@
           "icon": "download"
         },
         {
-          "anchor": "Bank Partnerships",
-          "href": "mailto:partnerships@fellow.app",
-          "icon": "handshake"
-        },
-        {
           "anchor": "Support",
           "href": "https://fellow.app/support",
           "icon": "life-ring"
@@ -96,12 +71,6 @@
     "dark": "/logo/dark.svg"
   },
   "navbar": {
-    "links": [
-      {
-        "label": "Bank Partnerships",
-        "href": "mailto:partnerships@fellow.app"
-      }
-    ],
     "primary": {
       "type": "button",
       "label": "Download App",
@@ -131,10 +100,6 @@
       {
         "header": "Partners",
         "items": [
-          {
-            "label": "Bank Partnerships",
-            "href": "https://fellow.app/banks"
-          },
           {
             "label": "Integration Guide",
             "href": "https://fellow.app/integration"
