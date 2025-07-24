@@ -1,259 +1,175 @@
 ---
 title: "How Fellow Works"
-description: "Understanding the financial router that connects all your money instantly"
+description: "Understanding Fellow’s instant transfer technology and the infrastructure powering universal financial connectivity"
 ---
 
-# The Problem: Your Money is Trapped in Silos
+Fellow operates using short-term credit instruments and liquidity pools, enabling seamless cross-platform money movement through router technology.
 
-Every financial app, bank, and wallet operates as an isolated island. When you want to move money between them, you're forced through slow, expensive bridges that take days and charge high fees.
+<Info>
+**Key Insight**: Fellow transforms every transfer request into a 2-4 day credit instrument, providing instant liquidity while traditional settlement happens in the background.
+</Info>
 
-<Warning>
-  **The Cost of Fragmentation**: Moving $1,000 from your crypto wallet to your bank account typically costs $25-50 in fees and takes 3-5 business days. Fellow does it in 5 seconds for $10.
-</Warning>
+## The Transfer Flow
 
-## Before Fellow: The Old Way
-
-*[Visual Diagram Placeholder: Scattered islands representing different financial platforms with slow, expensive bridges between them]*
-
-<AccordionGroup>
-  <Accordion icon="clock" title="Slow Transfers">
-    **Traditional Process:**
-    1. Sell crypto on Coinbase → 1-2 days
-    2. Wait for ACH transfer → 3-5 days  
-    3. Money finally arrives in bank account
-    
-    **Total Time: 4-7 business days**
-  </Accordion>
-  
-  <Accordion icon="dollar-sign" title="High Fees">
-    **Hidden Costs Add Up:**
-    - Trading fees: 0.5-1.5%
-    - Withdrawal fees: $10-25
-    - Wire transfer fees: $15-30
-    - Currency conversion: 2-4% markup
-    
-    **Total Cost: Often 3-6% of transfer amount**
-  </Accordion>
-  
-  <Accordion icon="x" title="Limited Compatibility">
-    **Platform Restrictions:**
-    - Can't send from Apple Pay to crypto wallet
-    - Investment gains trapped until sold and withdrawn
-    - Each platform requires separate apps and accounts
-    - No way to access all your money from one place
-  </Accordion>
-</AccordionGroup>
-
-## After Fellow: The Router Solution
-
-Fellow acts as a universal translator and instant highway system between all your financial platforms.
-
-*[Visual Diagram Placeholder: All platforms connected through central Fellow router with instant connections]*
-
-### The Three-Step Process:
+When you request an instant transfer, here’s exactly what happens:
 
 <Steps>
-  <Step title="1. Connect Everything">
-    **One-Time Setup:**
-    - Link all your banks, crypto wallets, investment accounts, and payment apps
-    - Fellow securely connects using bank-grade authentication (Plaid integration)
-    - Your phone number becomes your universal financial identity
-    - No need to move money—it stays in your existing accounts
+  <Step title="Transfer Request">
+    You want to move $1,000 from Schwab → Coinbase instantly using Fellow
   </Step>
-  
-  <Step title="2. Route Instantly">
-    **When You Want to Transfer:**
-    - Enter recipient's phone number and amount
-    - Fellow's router automatically finds the optimal path
-    - Considers speed, cost, and liquidity in real-time
-    - Handles all currency conversions and protocol translations
+  <Step title="Credit Creation">
+    Fellow creates a 2-4 day credit instrument for $1,000 backed by your pending ACH transfer
   </Step>
-  
-  <Step title="3. Settle in Seconds">
-    **True Instant Settlement:**
-    - Money settles on blockchain with cryptographic finality
-    - Recipient sees funds in their chosen account within 5 seconds
-    - No "pending" status—actual ownership transfer occurs
-    - Both parties receive confirmation of completed transaction
+  <Step title="Instant Settlement">
+    You receive $1,000 in your Coinbase account immediately (minus 40-80 basis points fee)
+  </Step>
+  <Step title="Background Processing">
+    Traditional ACH transfer begins from your Schwab account while you already have access to funds
+  </Step>
+  <Step title="Final Settlement">
+    ACH completes in 2-4 days, settling the credit instrument and completing the cycle
   </Step>
 </Steps>
 
-## The Technology: How the Router Works
+<Warning>
+If your ACH transfer fails, you owe the debt like a standard credit card with normal collection processes.
+</Warning>
 
-### Smart Path Finding
+## Core Infrastructure Components
 
-Fellow's router is like Google Maps for money—it knows every possible route and picks the best one:
+<CardGroup cols={2}>
+  <Card title="Router Technology" icon="route">
+    Cross-platform connectivity integrating traditional banking rails (ACH) and cryptocurrency networks through intelligent path optimization
+  </Card>
+
+  <Card title="Instant Settlement Engine" icon="bolt">
+    Short-term credit instruments that provide immediate liquidity while traditional transfers process in the background
+  </Card>
+
+  <Card title="Multi-Platform Integration" icon="link">
+    Seamless connections to banks, crypto exchanges, and fintech platforms through unified API infrastructure
+  </Card>
+
+  <Card title="Liquidity Pool Network" icon="coins">
+    Decentralized pool of capital from Liquidity Providers (LPs) backing all instant transfers
+  </Card>
+</CardGroup>
+
+## The Economics Behind Fellow
 
 <Tabs>
-  <Tab title="Path Discovery">
-    **Analyzing Options:**
-    - Scans all possible routes between your source and destination
-    - Considers direct connections and multi-hop paths
-    - Evaluates hundreds of route combinations in milliseconds
-    - Updates constantly as network conditions change
+  <Tab title="For Users">
+    **What You Pay:**
+    - 40-80 basis points per instant transfer
+    - Access to immediate liquidity across any platform
+    - No traditional banking delays or wire fees
+
+    **What You Get:**
+    - Instant settlement (< 5 seconds)
+    - Universal platform compatibility
+    - Credit assessment and limits that grow with usage
   </Tab>
-  
-  <Tab title="Optimization Engine">
-    **Selecting the Best Route:**
-    - **Speed**: Routes that settle fastest
-    - **Cost**: Lowest total fees including hidden costs
-    - **Reliability**: Historical success rates
-    - **Liquidity**: Available routing capacity
+
+  <Tab title="For Liquidity Providers">
+    **How You Earn:**
+    - Stake capital to back instant transfers
+    - Earn fees from every transaction (typically 30-65% APR)
+    - Share in protocol revenue through decentralized ownership
+
+    **Risk Management:**
+    - Pool diversification spreads default risk
+    - Credit limits start small and grow with payment history
+    - Failed ACH triggers standard credit collection processes
+
   </Tab>
-  
-  <Tab title="Real-Time Execution">
-    **Making It Happen:**
-    - Initiates transfers across multiple networks simultaneously
-    - Handles currency conversions at optimal rates
-    - Manages liquidity pools to ensure instant settlement
-    - Provides real-time status updates
+
+  <Tab title="Protocol Revenue">
+    **Revenue Streams:**
+    - Transfer fees (40-80 basis points per transaction)
+    - Interest on outstanding credit positions
+    - Potential interchange fees via BitGo conversions
+
+    **Cost Structure:**
+    - ~75% to LPs (yield on staked capital)
+    - ~15% to protocol operations
+    - ~10% to infrastructure (Circle, collections, etc.)
+
   </Tab>
 </Tabs>
 
-### Protocol Translation
+## Technical Architecture
 
-Different financial platforms speak different "languages." Fellow translates between them:
+The Fellow network operates on multiple layers:
 
-<CardGroup cols={2}>
-  <Card title="Traditional Banking" icon="bank">
-    **Legacy Systems:**
-    - ACH network protocols
-    - SWIFT international messaging
-    - Wire transfer systems
-    - Card network processing
+```mermaid
+graph TD
+    A[User Request] --> B[Router]
+    B --> C[Liquidity Pool]
+    B --> D[Privy Wallet]
+    B --> E[Circle USDC]
+    C --> F[Instant Settlement]
+    D --> G[Destination Platform]
+    E --> G
+```
+
+### Settlement Layer
+
+Short-term credit instruments with 2-4 day cycles, backed by traditional ACH transfers and managed through automated smart contracts.
+
+### Routing Layer
+
+Multi-network path optimization that automatically selects the most efficient route for transfers based on speed, cost, and available liquidity.
+
+### Integration Layer
+
+APIs and partnerships with banks, crypto exchanges, and fintech platforms enabling seamless connectivity across the financial ecosystem.
+
+<Note>
+This architecture enables Fellow to provide instant settlement while maintaining full compatibility with existing financial infrastructure.
+</Note>
+
+## Liquidity Pool Mechanics
+
+<CardGroup cols={3}>
+  <Card title="Pool Funding" icon="piggy-bank">
+    LPs stake USDC/stablecoins to provide instant liquidity for the network
   </Card>
-  <Card title="Modern Networks" icon="zap">
-    **Blockchain Systems:**
-    - Ethereum smart contracts
-    - Solana program library
-    - Bitcoin Lightning Network
-    - Cross-chain bridge protocols
+
+  <Card title="Utilization" icon="chart-line">
+    Pool capital backs all active credit instruments with dynamic interest rates
+  </Card>
+
+  <Card title="Revenue Distribution" icon="hand-holding-dollar">
+    Transfer fees flow to LPs proportional to their stake in the pool
   </Card>
 </CardGroup>
 
-## Real-World Examples
+### Risk Sharing Model
 
-### Example 1: Split Restaurant Bill
+Instead of individual LPs bearing specific risks, the pool model socializes both gains and losses:
 
-**Scenario**: You paid a $200 dinner bill and need to collect $50 each from 3 friends.
+- **Diversified Exposure**: No single LP is exposed to individual user defaults
+- **Proportional Returns**: Earnings distributed based on LP stake percentage
+- **Collective Risk Management**: Pool-wide strategies for credit assessment and collections
 
-**Old Way:**
-- Text friends asking for Venmo/Zelle
-- Wait for friends to remember and pay
-- Some pay through different apps
-- Money scattered across platforms
-- **Time: Days to weeks**
+## Key Differentiators
 
-**Fellow Way:**
-- Send payment request to all friends via phone numbers
-- Friends pay from whatever app they prefer (Venmo, Apple Pay, crypto wallet)
-- All payments instantly route to your chosen account
-- **Time: Minutes**
+<Check>
+**Instant Cross-Platform Transfers**: Move money between any financial platform in under 5 seconds
+</Check>
 
-*[Visual: Split bill interface showing multiple payment sources routing to one destination]*
+<Check>
+**Democratized Banking**: Anyone can become part of the credit infrastructure by staking capital
+</Check>
 
-### Example 2: Emergency Fund Access
+<Check>
+**Universal Compatibility**: Works with traditional banks, crypto exchanges, and fintech apps
+</Check>
 
-**Scenario**: Your car broke down and you need $800 for repairs, but your checking account only has $200.
+<Check>
+**Transparent Economics**: Clear fee structure with no hidden costs or complex terms
+</Check>
 
-**Old Way:**
-- Try to transfer from savings → 1-3 days
-- Or cash out investments → 2-5 days
-- Or sell crypto → 3-7 days
-- Pay repair shop with credit card and worry about interest
+## What Makes This Possible
 
-**Fellow Way:**
-- Open Fellow app and see all your money in one view
-- Route $600 from your Coinbase account to checking instantly
-- Pay repair shop immediately
-- **Time: 5 seconds**
-
-*[Visual: Dashboard showing aggregated balance across all platforms with instant transfer capability]*
-
-## Security: How Fellow Protects Your Money
-
-<Note>
-  **Bank-Grade Security**: Fellow uses the same security standards as major banks, with additional blockchain-based protections.
-</Note>
-
-### Multi-Layer Protection:
-
-<AccordionGroup>
-  <Accordion icon="shield-check" title="Account Security">
-    **Authentication:**
-    - Biometric login (Face ID, Touch ID, fingerprint)  
-    - Two-factor authentication required
-    - Device registration and monitoring
-    - Automatic fraud detection
-  </Accordion>
-  
-  <Accordion icon="lock" title="Transfer Security">
-    **Transaction Protection:**
-    - End-to-end encryption for all transfers
-    - Multi-signature approval for large amounts
-    - Real-time fraud monitoring
-    - Automatic reversal for suspicious activity
-  </Accordion>
-  
-  <Accordion icon="building" title="Regulatory Compliance">
-    **Licensed & Insured:**
-    - Operating under BitGo's Principal License Holder framework
-    - FDIC insurance for USD funds through Unit banking partnership
-    - Licensed in all operating states
-    - Full AML/KYC compliance
-  </Accordion>
-</AccordionGroup>
-
-## Why Fellow Can Do This (And Others Can't)
-
-### The Infrastructure Advantage
-
-<Tip>
-  **Stablecoin Backbone**: Fellow leverages mature stablecoin infrastructure that processed $27.6 trillion in 2024—creating universal rails that speak every platform's language.
-</Tip>
-
-**Key Differentiators:**
-
-1. **True Settlement**: While competitors show "instant" in your balance, Fellow achieves actual blockchain settlement
-2. **Universal Compatibility**: Works with both traditional finance and cryptocurrency ecosystems
-3. **Regulatory Compliance**: Built within established legal frameworks, not operating in gray areas
-4. **Professional Partnerships**: Integrated with BitGo, Unit, Plaid, and other enterprise-grade infrastructure
-
-### Network Effects
-
-As more people and institutions join Fellow:
-- **More routing paths** become available
-- **Lower costs** through economies of scale  
-- **Faster settlement** through increased liquidity
-- **Better rates** through volume aggregation
-
-## Getting Started is Simple
-
-<Steps>
-  <Step title="Download Fellow">
-    Available for iOS and Android - setup takes 2 minutes with just your phone number
-  </Step>
-  
-  <Step title="Connect Your Accounts">
-    Link your existing financial accounts using secure, read-only connections
-  </Step>
-  
-  <Step title="Start Routing">
-    Send your first transfer and experience instant settlement across platforms
-  </Step>
-</Steps>
-
-<CardGroup cols={2}>
-  <Card title="Download Now" icon="download" href="https://app.fellow.app">
-    Get Fellow and start routing money instantly
-  </Card>
-  <Card title="See Supported Platforms" icon="list" href="/getting-started/supported-platforms">
-    View all 500+ compatible financial platforms
-  </Card>
-</CardGroup>
-
----
-
-<Note>
-  **The Future is Connected**: Fellow transforms isolated financial platforms into a unified ecosystem where your money flows as freely as information across the internet.
-</Note>
+Fellow’s innovation lies in recognizing that most financial transfers don’t need to be “real” immediately—they just need to be **accessible** immediately. By creating short-term credit instruments backed by predictable ACH settlements, Fellow provides the user experience of instant transfers while working within existing financial rails.
