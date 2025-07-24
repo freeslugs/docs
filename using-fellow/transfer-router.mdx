@@ -51,16 +51,16 @@ flowchart LR
 The router handles four main transfer types with specific pathways for each:
 
 <Tabs>
-  <Tab title="ACH → Fintech">
-    **Bank to Fintech (Robinhood, etc.)**
+  <Tab title="Fintech → Fintech">
+    **Fintech to Fintech (Robinhood, etc.)**
     
-    1. User initiates ACH transfer from their bank to Fellow
+    1. User initiates an ACH transfer from a Fintech to their Fellow bank account
     2. Router captures the intent (destination: Robinhood account)
     3. We make instant transfer using user's credit card for immediate settlement
     4. Funds arrive in Robinhood instantly with minimal latency
     5. When ACH settles (2-4 days), it pays off the credit card balance
     
-    **Example**: Bank of America → Robinhood in under 30 seconds
+    **Example**: Betterment → Robinhood
   </Tab>
   
   <Tab title="Fiat → Crypto">
