@@ -2,7 +2,7 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
   "name": "Fellow",
-  "description": "The financial router that instantly connects all your money across any platform",
+  "description": "Modern digital bank enabling instant transfers between any financial platform - from traditional banks to crypto exchanges",
   "colors": {
     "primary": "#2563EB",
     "light": "#3B82F6", 
