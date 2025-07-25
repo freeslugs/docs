@@ -33,7 +33,8 @@
             "pages": [
               "using-fellow/banking-features",
               "using-fellow/transfer-router",
-              "using-fellow/become-your-own-bank"
+              "using-fellow/become-your-own-bank",
+              "using-fellow/sponsored-transfers"
             ]
           },
           {
@@ -108,6 +109,10 @@
           {
             "label": "Supported Platforms",
             "href": "https://docs.fellow.money/using-fellow/supported-platforms"
+          },
+          {
+            "label": "Sponsored Transfers",
+            "href": "https://docs.fellow.money/using-fellow/sponsored-transfers"
           },
           {
             "label": "API (Coming Soon)",
