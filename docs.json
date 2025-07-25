@@ -43,7 +43,7 @@
               "reference/security-and-risk",
               "reference/faq",
               "reference/legal-and-terms",
-              "reference/api-integrations-coming-soon"
+              "reference/api-integrations"
             ]
           }
         ]
@@ -112,7 +112,7 @@
           },
           {
             "label": "API (Coming Soon)",
-            "href": "https://docs.fellow.money/reference/api-integrations-coming-soon"
+            "href": "https://docs.fellow.money/reference/api-integrations"
           }
         ]
       },
@@ -129,7 +129,7 @@
           },
           {
             "label": "Contact",
-            "href": "mailto:support@fellow.money"
+            "href": "mailto:hello@fellow.money"
           }
         ]
       },
