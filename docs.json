@@ -41,9 +41,8 @@
             "pages": [
               "reference/fees-and-pricing",
               "reference/security-and-risk",
-              "reference/faq",
-              "reference/legal-and-terms",
-              "reference/api-integrations"
+              "reference/api-integrations",
+              "reference/faq"
             ]
           }
         ]
