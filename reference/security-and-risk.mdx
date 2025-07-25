@@ -6,29 +6,27 @@ description: "Comprehensive overview of Fellow's security infrastructure, risk m
 Fellow combines bank-grade security protocols with cryptocurrency best practices, built on enterprise-grade infrastructure from Cred.ai and Privy to provide comprehensive asset protection across traditional and digital finance.
 
 <Info>
-**Multi-Layer Security**: Fellow operates with defense-in-depth security, combining traditional banking compliance, advanced crypto security, and real-time AI risk management.
+  **Multi-Layer Security**: Fellow operates with defense-in-depth security, combining traditional banking compliance, advanced crypto security, and real-time AI risk management.
 </Info>
 
 ## Banking Infrastructure Security
 
-Fellow's traditional banking services are powered by Cred.ai's proprietary banking technology, built over 2.5 years with full compliance management and licensed through WSFS Bank.
+Fellow's traditional banking services are powered by Cred.ai's proprietary banking technology, built with full compliance management and licensed through WSFS Bank.
 
 <CardGroup cols={2}>
   <Card title="FDIC Protection" icon="shield-check">
-    Deposits insured up to $250,000 through WSFS Bank, Member FDIC
+    Deposits insured up to \$250,000 through WSFS Bank, Member FDIC
     Full regulatory compliance and consumer protection
   </Card>
-  
   <Card title="Banking Certifications" icon="certificate">
     PCI DSS and EI3PA certified infrastructure
     Industry-standard security compliance for payment processing
   </Card>
-  
   <Card title="Privacy Protection" icon="user-lock">
-    Cred.ai never shares user data
+    Our banking partner Cred.ai never shares user data 
+
     Strict privacy controls and data protection policies
   </Card>
-  
   <Card title="24/7 Human Support" icon="headphones">
     Real human customer support available around the clock
     Immediate assistance for security concerns and account issues
@@ -37,62 +35,28 @@ Fellow's traditional banking services are powered by Cred.ai's proprietary banki
 
 ---
 
-## Advanced Security Features
+## Infrastructure Security
 
-Fellow inherits and extends Cred.ai's cutting-edge security technologies designed for modern digital banking.
+Fellow operates on enterprise-grade security infrastructure that provides comprehensive protection across all financial operations.
 
-<Tabs>
-  <Tab title="High Security Mode">
-    **Micro-Authorization Windows**
-    
-    Fellow's High Security Mode creates tiny self-expiring authorization windows for ultimate protection, dramatically reducing the window for potential fraud.
-    
-    **How It Works:**
-    - Authorization windows last only seconds
-    - Automatic expiration prevents unauthorized use
-    - Can be activated for both physical and digital transactions
-    - Eliminates fraud by creating minimal exposure windows
-    
-    **Use Cases:**
-    - High-risk transactions or unfamiliar merchants
-    - Large transfer amounts requiring extra security
-    - Public WiFi or untrusted network environments
-  </Tab>
-  
-  <Tab title="Digital Card Protection">
-    **Regenerating Virtual Cards**
-    
-    Fellow provides "Stealth Cards" for risky transactions like ordering over the phone, unfamiliar websites, or free trial signups.
-    
-    **Security Benefits:**
-    - Generate new card numbers instantly when compromised
-    - Separate virtual cards for different use cases
-    - Self-destructing cards for single-use transactions
-    - Protection for your primary account from exposure
-    
-    **Integration:**
-    - Works with mobile wallets (Apple Pay, Google Pay)
-    - Online, phone, and in-person transactions
-    - Instant activation upon approval
-  </Tab>
-  
-  <Tab title="AI-Powered Fraud Prevention">
-    **Real-Time Transaction Monitoring**
-    
-    Fellow's AI technology learns spending patterns and prevents unauthorized transactions in real-time.
-    
-    **Capabilities:**
-    - Pattern recognition for unusual activity
-    - Automatic decline of suspicious transactions
-    - Real-time alerts for account activity
-    - Behavioral analysis and risk scoring
-    
-    **User Control:**
-    - Friend & Foe List for trusted/blocked merchants
-    - Customizable spending controls and limits
-    - Real-time transaction notifications
-  </Tab>
-</Tabs>
+<CardGroup cols={2}>
+  <Card title="Real-Time Fraud Monitoring" icon="eye">
+    **Advanced Detection Systems**
+    AI-powered fraud detection monitors all transactions in real-time, automatically flagging and preventing suspicious activity
+  </Card>
+  <Card title="Secure Transaction Processing" icon="lock">
+    **Multi-Layer Validation**
+    Every transfer goes through multiple security checks including identity verification, risk scoring, and automated approval workflows
+  </Card>
+  <Card title="Data Encryption" icon="shield">
+    **End-to-End Protection**
+    All sensitive data is encrypted in transit and at rest using industry-standard encryption protocols
+  </Card>
+  <Card title="Access Controls" icon="key">
+    **Identity Management**
+    Multi-factor authentication, secure session management, and granular permission controls protect account access
+  </Card>
+</CardGroup>
 
 ---
 
@@ -105,19 +69,16 @@ Fellow's crypto capabilities are powered by Privy's enterprise-grade wallet infr
     **True User Ownership**
     Users have full custody of their wallets without needing to manage secret keys. Neither Privy nor Fellow ever see user keys
   </Card>
-  
   <Card title="Hardware Security" icon="microchip">
     **TEE Protection**
     Keys are only reconstructed in secure hardware environments, ensuring only owners can access their assets
   </Card>
-  
   <Card title="Distributed Key Management" icon="puzzle-piece">
     **Shamir's Secret Sharing**
     Cryptographic keys are split using Shamir's secret sharing and distributed across isolated services with no single point of failure
   </Card>
-  
   <Card title="Cross-Chain Support" icon="link">
-    **Universal Compatibility** 
+    **Universal Compatibility**
     Support for EVM chains (Ethereum, Base, Arbitrum), Solana, Bitcoin, and more
   </Card>
 </CardGroup>
@@ -127,49 +88,39 @@ Fellow's crypto capabilities are powered by Privy's enterprise-grade wallet infr
 <Tabs>
   <Tab title="Key Security">
     **Defense-in-Depth Architecture**
-    
+
     Privy's security combines key sharding, end-to-end encryption, secure enclaves, and RBAC with micro-segmentation to enforce least privilege.
-    
+
     **Security Layers:**
+
     - **Hardware Isolation**: Keys stored in secure enclaves (TEEs)
     - **Encrypted Networks**: All data transmission is encrypted
     - **Distributed Storage**: Key shards stored across isolated services
     - **Role-Based Access**: Least privilege access controls
-    
+
     **No Single Points of Failure:**
+
     - Multiple independent security layers
     - Redundant key storage across geographic regions
     - Automated failover and recovery systems
   </Tab>
-  
   <Tab title="User Control">
     **Self-Custody with Convenience**
-    
+
     Users can export keys for their embedded wallet, providing an escape hatch to leave Privy at any time.
-    
+
     **User Sovereignty:**
+
     - Full ownership of private keys
     - Ability to export and migrate wallets
     - No vendor lock-in or dependency risks
     - Direct blockchain interaction capabilities
-    
+
     **Seamless Management:**
+
     - No seed phrase management required
     - Automatic wallet generation and backup
     - Simple recovery through authenticated login
-  </Tab>
-  
-  <Tab title="Transaction Security">
-    **Policy-Driven Controls**
-    
-    Granular policies control wallet actions, including allowlisted contracts, maximum transfer amounts, and MFA requirements.
-    
-    **Available Controls:**
-    - **Transaction Limits**: Maximum amounts per transaction/day
-    - **Allowlisted Recipients**: Pre-approved addresses only
-    - **Smart Contract Restrictions**: Limit interaction with specific contracts
-    - **Multi-Factor Authentication**: Additional verification for large transfers
-    - **Multisig Requirements**: Require multiple approvals for certain actions
   </Tab>
 </Tabs>
 
@@ -180,44 +131,59 @@ Fellow's crypto capabilities are powered by Privy's enterprise-grade wallet infr
 Fellow's instant transfer system includes comprehensive risk assessment and default handling processes to protect both users and liquidity providers.
 
 <CardGroup cols={2}>
-  <Card title="Real-Time Credit Assessment" icon="brain">
-    **AI-Driven Underwriting**
-    Credit decisions happen in real-time during transfer requests using advanced AI algorithms
+  <Card title="ACH Settlement Monitoring" icon="clock">
+    Real-time tracking of ACH transfers already in progress, providing confidence that funds will settle within 1-3 business days
   </Card>
-  
-  <Card title="Standard Credit Reporting" icon="chart-line">
-    **Credit Accountability**
-    All credit activities report to major credit bureaus, maintaining user accountability and building credit history
+  <Card title="Identity Verification" icon="id-card">
+    Connected bank accounts and wallets serve as proof of identity and fund ownership, reducing fraud risk
   </Card>
-  
-  <Card title="Automated Collections" icon="refresh">
-    **Integrated Recovery**
-    KYC data from Cred.ai flows seamlessly to collections agencies for efficient default recovery
+  <Card title="Credit Accountability" icon="chart-line">
+    All credit activities can impact credit scores through standard reporting, maintaining user payment responsibility
   </Card>
-  
+  <Card title="KYC-Based Collections" icon="file">
+    Complete identity verification data enables professional collections processes when needed
+  </Card>
   <Card title="Pool Risk Distribution" icon="users">
-    **Diversified Exposure**
     Individual defaults are socialized across the entire liquidity pool rather than affecting specific providers
   </Card>
 </CardGroup>
 
-### Risk Assessment Process
+### Infrastructure Monitoring
+
+Fellow provides real-time monitoring and transparency across all platform integrations to set proper user expectations.
+
+<CardGroup cols={2}>
+  <Card title="Platform Latency Tracking" icon="clock">
+    Continuous monitoring of response times across all connected banks, exchanges, and financial platforms
+  </Card>
+  <Card title="Settlement Performance" icon="chart-bar">
+    Public reporting on ACH settlement times and success rates to maintain transparency
+  </Card>
+  <Card title="Liquidity Pool Health" icon="heart-pulse">
+    Real-time monitoring of pool utilization, performance metrics, and system stability
+  </Card>
+  <Card title="Platform Status" icon="signal">
+    Live status updates for all integrated platforms and services to inform users of any issues
+  </Card>
+</CardGroup>
+
+### Transfer Validation Process
 
 <Steps>
   <Step title="Transfer Request">
-    User initiates instant transfer through Fellow's interface
+    User initiates instant transfer between connected accounts through Fellow's interface
   </Step>
-  <Step title="Real-Time Analysis">
-    AI system analyzes user credit profile, transfer history, and risk factors in milliseconds
+  <Step title="Account Verification">
+    System validates that both source and destination accounts are properly connected and verified
   </Step>
-  <Step title="Credit Decision">
-    Automated approval or denial based on risk assessment and available liquidity
+  <Step title="ACH Initiation">
+    Traditional ACH transfer begins immediately, providing confidence in upcoming settlement
   </Step>
-  <Step title="Instant Settlement">
-    Approved transfers receive immediate liquidity while ACH processes in background
+  <Step title="Instant Liquidity">
+    Pool provides immediate funds to destination while ACH processes in background
   </Step>
   <Step title="Settlement Monitoring">
-    System tracks ACH completion and triggers collection processes if needed
+    System tracks ACH completion over 1-3 business days and handles any exceptions
   </Step>
 </Steps>
 
@@ -230,50 +196,55 @@ Fellow's single-pool architecture includes sophisticated risk management to prot
 <Tabs>
   <Tab title="Pool Structure">
     **Diversified Risk Model**
-    
+
     Instead of individual LPs bearing specific risks, Fellow's pool model socializes both gains and losses across all participants.
-    
+
     **Risk Distribution:**
+
     - **No Concentrated Exposure**: No single LP exposed to individual user defaults
-    - **Short Duration**: 2-4 day exposure periods limit risk timeframes  
+    - **Short Duration**: 2-4 day exposure periods limit risk timeframes
     - **Small Positions**: Many small credit instruments vs. few large exposures
     - **Dynamic Limits**: Credit limits adjust based on user behavior and pool capacity
-    
+
     **Protective Mechanisms:**
+
     - **Reserve Fund**: 10-20% of fees held for default protection
     - **Utilization Caps**: Maximum pool usage limits to maintain liquidity
     - **Automated Rebalancing**: Dynamic capital allocation based on risk metrics
   </Tab>
-  
   <Tab title="Default Handling">
-    **Multi-Tier Recovery Process**
-    
-    Fellow employs a comprehensive approach to handle defaults and protect LP capital.
-    
-    **Recovery Waterfall:**
-    1. **User Responsibility**: Failed ACH creates standard credit card debt obligation
-    2. **Automatic Collections**: Integrated collections process with full KYC data
-    3. **Reserve Fund**: Pool reserves cover initial losses
-    4. **Socialized Losses**: Remaining losses distributed proportionally across LPs
-    
-    **Collection Integration:**
-    - Seamless data flow from Cred.ai KYC to collections agencies
-    - Standard credit reporting maintains user accountability
-    - Professional recovery processes similar to traditional credit cards
+    **User Liability and Collections Process**
+
+    Users remain fully liable for payments even if ACH settlement extends beyond the typical 1-3 day window.
+
+    **Recovery Process:**
+
+    1. **User Responsibility**: Failed or delayed ACH creates credit obligation that users must fulfill
+    2. **Credit Impact**: Payment issues can negatively affect credit scores through standard reporting
+    3. **Collections Capability**: Complete KYC data from signup enables professional collections when necessary
+    4. **Socialized Losses**: Any unrecovered amounts are distributed proportionally across LPs
+
+    **Identity Verification:**
+
+    - Full KYC data collected during account setup
+    - Connected bank accounts and wallets verify user identity
+    - Professional collections agencies can be engaged using verified identity data
+    - Standard credit reporting maintains payment accountability
   </Tab>
-  
   <Tab title="Performance Monitoring">
     **Real-Time Risk Analytics**
-    
+
     Continuous monitoring and adjustment of pool performance and risk metrics.
-    
+
     **Key Metrics:**
+
     - **Default Rates**: Historical and trending default statistics
     - **Recovery Rates**: Success of collections processes
     - **Pool Utilization**: Active vs. available liquidity ratios
     - **Yield Performance**: Returns vs. risk-adjusted benchmarks
-    
+
     **Automated Adjustments:**
+
     - Dynamic interest rates based on risk and utilization
     - Credit limit adjustments for individual users
     - Pool rebalancing based on performance metrics
@@ -289,22 +260,23 @@ Fellow operates under comprehensive regulatory oversight through its banking and
 <CardGroup cols={3}>
   <Card title="Banking Regulations" icon="building-columns">
     **Traditional Finance Compliance**
+
     - FDIC insurance through WSFS Bank
     - Federal banking regulations
     - Consumer protection laws
     - Anti-money laundering (AML) compliance
   </Card>
-  
   <Card title="Payment Processing" icon="credit-card">
     **Industry Standards**
+
     - PCI DSS certification
     - Visa network compliance
     - Payment card industry standards
     - Data security requirements
   </Card>
-  
   <Card title="Cryptocurrency" icon="bitcoin">
     **Digital Asset Compliance**
+
     - FinCEN MSB registration where required
     - State-level money transmission licenses
     - Crypto custody regulations
@@ -319,12 +291,14 @@ Fellow operates under comprehensive regulatory oversight through its banking and
 Fellow maintains comprehensive incident response procedures to address any security concerns quickly and effectively.
 
 **24/7 Monitoring:**
+
 - Continuous system monitoring and alerting
 - Real-time fraud detection and prevention
 - Automated threat response systems
 - Human security team oversight
 
 **Incident Response Process:**
+
 1. **Detection**: Automated systems and human monitoring
 2. **Assessment**: Rapid evaluation of threat severity
 3. **Containment**: Immediate measures to limit impact
@@ -332,6 +306,7 @@ Fellow maintains comprehensive incident response procedures to address any secur
 5. **Communication**: Transparent updates to affected users
 
 **User Protection:**
+
 - Immediate account freezing for suspected compromise
 - Proactive user notifications for security issues
 - Full investigation and remediation of incidents
@@ -344,14 +319,15 @@ Fellow maintains comprehensive incident response procedures to address any secur
 <CardGroup cols={2}>
   <Card title="Account Security" icon="lock">
     **Protect Your Access**
+
     - Use strong, unique passwords
     - Enable multi-factor authentication
     - Keep app updated to latest version
     - Don't share login credentials
   </Card>
-  
   <Card title="Transaction Safety" icon="shield">
     **Safe Transfer Practices**
+
     - Verify recipient addresses carefully
     - Use High Security Mode for large transfers
     - Monitor account activity regularly
@@ -364,31 +340,17 @@ Fellow maintains comprehensive incident response procedures to address any secur
 ## Security Resources
 
 <CardGroup cols={3}>
-  <Card 
-    title="Report Security Issues" 
-    icon="flag" 
-    href="mailto:security@fellow.money"
-  >
+  <Card title="Report Security Issues" icon="flag" href="mailto:security@fellow.money">
     Contact our security team immediately for any concerns or suspected vulnerabilities
   </Card>
-  
-  <Card 
-    title="24/7 Support" 
-    icon="headphones" 
-    href="/support"
-  >
+  <Card title="24/7 Support" icon="headphones" href="/support">
     Get immediate help with security questions or account issues from real humans
   </Card>
-  
-  <Card 
-    title="Security Updates" 
-    icon="bell" 
-    href="https://x.com/paywithfellow"
-  >
+  <Card title="Security Updates" icon="bell" href="https://x.com/paywithfellow">
     Stay informed about security enhancements and important updates to Fellow's platform
   </Card>
 </CardGroup>
 
 <Note>
-**Questions about security?** Our security team and customer support are available 24/7 to address any concerns about account safety, transaction security, or privacy protection.
+  **Questions about security?** Our security team and customer support are available 24/7 to address any concerns about account safety, transaction security, or privacy protection.
 </Note>
