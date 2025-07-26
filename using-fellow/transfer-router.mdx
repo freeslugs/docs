@@ -1,31 +1,28 @@
 ---
-title: "Transfer Router"
+title: "Transfer Router "
 description: "Deep dive into Fellow's router technology that enables instant cross-platform money movement through intelligent path optimization and universal financial connectivity"
 ---
 
 <Info>
-**Universal Financial Abstraction**: The router treats all financial platforms the same way, whether you're moving between Chase and Coinbase or Ethereum and Solana.
+  **Universal Financial Abstraction**: The router treats all financial platforms the same way, whether you're moving between Chase and Coinbase or Ethereum and Solana.
 </Info>
 
 ## What is the Router?
 
-The Transfer Router is Fellow's proprietary technology that creates a universal abstraction layer over the entire financial ecosystem, enabling seamless money movement between platforms that were never designed to work together.
+The Transfer Router is Fellow's proprietary infrastructure that creates a universal abstraction layer over the entire financial ecosystem, enabling seamless money movement between platforms that were never designed to work together. The Router triggers a seamless flow-of-funds that to the user appears as an instant transfer but involves an intricate set of moving parts.
 
 <CardGroup cols={2}>
   <Card title="Intelligent Routing" icon="route">
     Automatically selects optimal paths between any two financial platforms based on speed, cost, and liquidity availability
   </Card>
-  
   <Card title="Protocol Translation" icon="language">
     Seamlessly converts between traditional banking rails (ACH) and cryptocurrency networks without user complexity
   </Card>
-  
   <Card title="Instant Settlement" icon="bolt">
     Provides immediate access to funds through short-term credit instruments while background settlement occurs
   </Card>
-  
   <Card title="Universal Connectivity" icon="link">
-    Single API that works with 10,000+ banks, exchanges, and financial platforms through unified infrastructure
+    Single API that works with 10,000\+ banks, exchanges, and financial platforms through unified infrastructure
   </Card>
 </CardGroup>
 
@@ -53,48 +50,45 @@ The router handles four main transfer types with specific pathways for each:
 <Tabs>
   <Tab title="Fintech → Fintech">
     **Fintech to Fintech (Robinhood, etc.)**
-    
+
     1. User initiates an ACH transfer from a Fintech to their Fellow bank account
     2. Router captures the intent (destination: Robinhood account)
     3. We make instant transfer using user's credit card for immediate settlement
     4. Funds arrive in Robinhood instantly with minimal latency
     5. When ACH settles (2-4 days), it pays off the credit card balance
-    
+
     **Example**: Betterment → Robinhood
   </Tab>
-  
   <Tab title="Fiat → Crypto">
     **Traditional Money to Cryptocurrency**
-    
+
     1. User initiates transfer from bank/fintech to crypto address
     2. Router uses Circle or BitGo as certified conversion agent
     3. Conversion agent pulls funds from user's credit card instantly
     4. Converts fiat to crypto and sends to user's desired wallet address
     5. ACH settles the credit card balance when bank transfer completes
-    
+
     **Example**: Chase Bank → Bitcoin wallet via Circle conversion
   </Tab>
-  
   <Tab title="Crypto → Crypto">
     **Cross-Chain Cryptocurrency**
-    
+
     1. User sends crypto to their Privy wallet (Fellow's integrated wallet)
     2. Router transfers from Privy to destination wallet on behalf of user
     3. For cross-chain transfers, use LiFi or Orbiter Finance for bridging/swapping
     4. No additional settlement needed - crypto transfers are natively instant
-    
+
     **Example**: Ethereum → Solana via LiFi bridge, settled in under 2 minutes
   </Tab>
-  
   <Tab title="Crypto → Fintech">
     **Cryptocurrency to Traditional Finance**
-    
+
     1. User sends crypto transaction to their Privy wallet
     2. Router sends crypto balance from Privy to Circle or BitGo
     3. Conversion agent converts crypto to fiat via ACH or wire to Cred
     4. Router transfers fiat from Cred to destination fintech platform
     5. User sees funds in destination account while settlement processes
-    
+
     **Example**: Bitcoin → Schwab brokerage account via BitGo conversion
   </Tab>
 </Tabs>
@@ -112,13 +106,11 @@ The router operates on a three-tier settlement system that provides instant user
    - Real-time credit assessment via Fellow's AI
    - Provide immediate fund availability in destination accounts
    - User experience identical to instant transfers
-
-2. **Tier 2: Settlement Layer** 
+2. **Tier 2: Settlement Layer**
    - Traditional ACH/wire transfers initiated automatically
    - Blockchain transactions queued and optimized
    - Cross-platform API calls for balance updates
    - Settlement monitoring and exception handling
-
 3. **Tier 3: Reconciliation**
    - Credit instruments retired upon ACH completion
    - Failed transfers trigger standard collection processes
@@ -128,19 +120,22 @@ The router operates on a three-tier settlement system that provides instant user
 ### Key Integration Partners
 
 **Conversion Agents:**
+
 - **Circle**: USDC minting and fiat conversion services
 - **BitGo**: Multi-asset custody and conversion for crypto transfers
 
 **Bridge & Swap Protocols:**
-- **LiFi**: Cross-chain bridging for multi-network crypto transfers  
+
+- **LiFi**: Cross-chain bridging for multi-network crypto transfers
 - **Orbiter Finance**: Layer 2 and cross-chain asset movement
 
 **Banking Infrastructure:**
+
 - **Cred.ai**: Core banking platform with FDIC insurance via WSFS Bank
-- **Plaid**: Secure connections to 10,000+ banks and financial institutions
+- **Plaid**: Secure connections to 10,000\+ banks and financial institutions
 
 <Note>
-For a complete list of supported platforms and networks, see our [Supported Platforms](/using-fellow/supported-platforms) page.
+  For a complete list of supported platforms and networks, see our [Supported Platforms](/using-fellow/supported-platforms) page.
 </Note>
 
 ---
@@ -152,18 +147,21 @@ For a complete list of supported platforms and networks, see our [Supported Plat
 Fellow starts with one primary liquidity pool to keep things simple and focused:
 
 **USDC Pool:**
+
 - **Single Asset**: LPs deposit USDC to provide liquidity for all transfers
 - **Short-Term Loans**: Pool backs 2-4 day credit instruments for instant settlement
 - **Universal Coverage**: USDC pool handles conversions for all transfer types via our integration partners
 - **Simplified Management**: One pool means clearer economics and easier risk management
 
 **How It Works:**
+
 1. **LP Deposits**: Users stake USDC to earn yield from transfer fees
 2. **Credit Backing**: Pool provides instant liquidity when users request transfers
 3. **Settlement**: Pool gets repaid when ACH transfers complete (2-4 days)
 4. **Yield Distribution**: Transfer fees flow back to LPs proportional to their stake
 
 **Pool Management:**
+
 - **Dynamic Rates**: Interest rates adjust based on pool utilization
 - **Risk Controls**: Per-user credit limits and automated default recovery
 - **Reserve Management**: Portion of fees held in reserve for stability
@@ -174,11 +172,7 @@ Fellow starts with one primary liquidity pool to keep things simple and focused:
 
 Fellow's router operates with comprehensive security and risk management systems to protect user funds and ensure reliable transfers.
 
-<Card 
-  title="Security & Risk Details" 
-  icon="shield-check" 
-  href="/reference/security-and-risk"
->
+<Card title="Security & Risk Details" icon="shield-check" href="/reference/security-and-risk">
   Learn about Fellow's security infrastructure, risk controls, and fund protection measures
 </Card>
 
@@ -187,10 +181,11 @@ Fellow's router operates with comprehensive security and risk management systems
 ## API & Developer Access
 
 <Note>
-**Coming Q3 2025**: Public API access for developers and institutional partners who want to integrate Fellow's router technology into their own applications.
+  **Coming Q3 2025**: Public API access for developers and institutional partners who want to integrate Fellow's router technology into their own applications.
 </Note>
 
 **Planned API Features:**
+
 - **Transfer API**: Programmatic access to instant cross-platform transfers
 - **Balance API**: Real-time balance checking across connected accounts
 - **Routing API**: Access to router intelligence for custom transfer optimization
@@ -203,19 +198,10 @@ Fellow's router operates with comprehensive security and risk management systems
 Ready to experience instant cross-platform transfers? The router works seamlessly in the background of every Fellow transfer.
 
 <CardGroup cols={2}>
-  <Card 
-    title="Make Your First Transfer" 
-    icon="paper-plane" 
-    href="/overview/getting-started#step-3-your-first-transfer"
-  >
+  <Card title="Make Your First Transfer" icon="paper-plane" href="/overview/getting-started#step-3-your-first-transfer">
     Experience the router in action with your first instant transfer
   </Card>
-  
-  <Card 
-    title="How Fellow Works" 
-    icon="lightbulb" 
-    href="/overview/how-fellow-works"
-  >
+  <Card title="How Fellow Works" icon="lightbulb" href="/overview/how-fellow-works">
     Understand the economics and business model behind the router technology
   </Card>
 </CardGroup>
